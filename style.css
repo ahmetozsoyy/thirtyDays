@@ -1,14 +1,8 @@
-/* Sayfa tamamını ortalar */
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -16,46 +10,51 @@ body {
   padding-top: 40px;
 }
 
-/* Ortadaki kutu */
 .container {
   max-width: 960px;
   width: 100%;
   padding: 20px;
   background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-/* Başlık */
 h1 {
+  font-size: 30px;
   color: #333;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+}
+
+select {
+  font-size: 16px;
+  padding: 8px;
+  width: 220px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
   margin-bottom: 20px;
 }
 
-/* Dropdown */
-label, select {
-  font-size: 16px;
-  margin: 10px;
-}
-
-/* Gezi kartları alanı */
 #geziYerleri {
   margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  justify-items: center;
+  gap: 15px;
 }
 
-/* Her bir gezi kartı */
 .gezi-karti {
   background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   width: 100%;
-  max-width: 280px;
+  max-width: 270px;
   text-align: left;
 }
 
@@ -64,4 +63,16 @@ label, select {
   border-radius: 6px;
   width: 100%;
   height: auto;
+}
+
+.gezi-karti h3 {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.gezi-karti p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
 }
