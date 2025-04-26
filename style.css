@@ -62,8 +62,10 @@ select {
   margin-top: 10px;
   border-radius: 6px;
   width: 100%;
-  height: auto;
+  height: 200px; /* SABİT YÜKSEKLİK */
+  object-fit: cover; /* FOTOĞRAFI KESEREK KAPLA */
 }
+
 
 .gezi-karti h3 {
   font-size: 18px;
@@ -75,4 +77,23 @@ select {
   font-size: 14px;
   color: #555;
   line-height: 1.4;
+}
+
+.gezi-karti {
+  width: 100%; /* Kartların genişliğini ekran boyutuna göre uyarladık */
+  max-width: 500px; /* Belli bir boyut sınırlandırması ekledik */
+  padding: 30px; /* İç boşluğu biraz azalttık */
+  box-sizing: border-box; /* Padding'in boyutu etkilemesini engelliyoruz */
+}
+
+.gezi-karti img {
+  height: 320px; /* Fotoğraf yüksekliğini biraz küçülttük */
+  object-fit: cover; /* Fotoğraf taşmadan kartın içine düzgünce oturuyor */
+  border-radius: 8px; /* Yumuşak kenar */
+}
+
+#geziYerleri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Mobilde de uyumlu hale getirdik */
+  gap: 20px; /* Kartlar arasında boşluk bıraktık */
 }

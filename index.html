@@ -10,15 +10,31 @@
   <div class="container">
     <h1>Gezi Rehberi</h1>
 
-    <label for="sehirSec">Bir şehir seçin:</label>
-    <select id="sehirSec">
-      <option value="">--Şehir Seçin--</option>
-    </select>
+    <label for="bolgeSec">Bir bölge seçin:</label>
+<select id="bolgeSec">
+  <option value="">--Bölge Seçin--</option>
+  <option value="Marmara">Marmara</option>
+  <option value="Karadeniz">Karadeniz</option>
+  <option value="Akdeniz">Akdeniz</option>
+  <option value="Ege">Ege</option>
+  <option value="Ic_Anadolu">İç Anadolu</option>
+  <option value="Dogu_Anadolu">Doğu Anadolu</option>
+  <option value="Guneydogu_Anadolu">Güneydoğu Anadolu</option>
+</select>
+
+<label for="sehirSec">Bir şehir seçin:</label>
+<select id="sehirSec" disabled>
+  <option value="">--Şehir Seçin--</option>
+</select>
+
+    <h2 id="sehirBaslik"></h2>
+
 
     <div id="geziYerleri"></div>
   </div>
 
-  <script src="data.js"></script>
-  <script src="script.js"></script>
+<!-- Verileri Yükleyecek Script'ler -->
+<script src="data.js"></script> <!-- Şehir verilerini buradan alacak -->
+<script src="script.js"></script> <!-- Ana işleyişi sağlayan script -->
 </body>
 </html>
