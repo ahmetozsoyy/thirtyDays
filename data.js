@@ -152,7 +152,61 @@ const sehirVerileri = {
     aciklama: "El yapımı bakır ürünlerin satıldığı tarihi han.",
     resim: "img/bakirhan.jpg"
   }
-]
+],
+"Tekirdağ": [
+  {
+    isim: "Rakoczi Müzesi",
+    aciklama: "Macar Prensi II. Ferenc Rakoczi'nin anılarına adanmış tarihi müze.",
+    resim: "img/rakoczi.jpg"
+  },
+  {
+    isim: "Şarköy Sahili",
+    aciklama: "Uzun plajları ve temiz deniziyle ünlü tatil beldesi.",
+    resim: "img/sarkoy.jpg"
+  },
+  {
+    isim: "Uçmakdere",
+    aciklama: "Doğal güzellikleri ve yamaç paraşütü aktiviteleriyle ünlü bir köy.",
+    resim: "img/ucmakdere.jpg"
+  }
+],
+
+"Edirne": [
+  {
+    isim: "Selimiye Camii",
+    aciklama: "Mimar Sinan'ın ustalık eseri olan, UNESCO Dünya Mirası Listesi'nde yer alan cami.",
+    resim: "img/selimiye.jpg"
+  },
+  {
+    isim: "Edirne Kırkpınar",
+    aciklama: "Dünyanın en eski yağlı güreş festivali olan Kırkpınar'ın yapıldığı alan.",
+    resim: "img/kirkpinar.jpg"
+  },
+  {
+    isim: "Meriç Köprüsü",
+    aciklama: "Tarihi Osmanlı köprüsü ve Edirne'nin simgelerinden biri.",
+    resim: "img/meric.jpg"
+  }
+],
+
+"Kırklareli": [
+  {
+    isim: "Dupnisa Mağarası",
+    aciklama: "Türkiye'nin en büyük ikinci mağarası, doğal güzellikleriyle ünlü.",
+    resim: "img/dupnisa.jpg"
+  },
+  {
+    isim: "İğneada Longoz Ormanları",
+    aciklama: "Avrupa'nın en büyük longoz (subasar) ormanı.",
+    resim: "img/igneada.jpg"
+  },
+  {
+    isim: "Kırklareli Müzesi",
+    aciklama: "Bölgenin arkeolojik ve etnografik eserlerini sergileyen müze.",
+    resim: "img/kirklarelimuzesi.jpg"
+  }
+],
+
 
   
 };

@@ -7,32 +7,44 @@
   <link rel="stylesheet" href="style.css"> <!-- style.css burada bağlanıyor -->
 </head>
 <body>
-  <div class="container">
-    <h1>Gezi Rehberi</h1>
-
-    <label for="bolgeSec">Bir bölge seçin:</label>
-<select id="bolgeSec">
-  <option value="">--Bölge Seçin--</option>
-  <option value="Marmara">Marmara</option>
-  <option value="Karadeniz">Karadeniz</option>
-  <option value="Akdeniz">Akdeniz</option>
-  <option value="Ege">Ege</option>
-  <option value="Ic_Anadolu">İç Anadolu</option>
-  <option value="Dogu_Anadolu">Doğu Anadolu</option>
-  <option value="Guneydogu_Anadolu">Güneydoğu Anadolu</option>
-</select>
-
-<label for="sehirSec">Bir şehir seçin:</label>
-<select id="sehirSec" disabled>
-  <option value="">--Şehir Seçin--</option>
-</select>
-
-    <h2 id="sehirBaslik"></h2>
-
-
-    <div id="geziYerleri"></div>
+  <div id="giris-ekrani">
+    <h1>Gezi Rehberi Sitesi</h1>
+    <button onclick="girisYap()">Hadi Başlayalım!</button>
   </div>
-
+  <div id="sehir-secim-ekrani" style="display: none;">
+    <div class="container">
+      <h1>Gezi Rehberi</h1>
+  
+      <label for="bolgeSec">Bir bölge seçin:</label>
+      <select id="bolgeSec">
+        <option value="">--Bölge Seçin--</option>
+        <option value="Marmara">Marmara</option>
+        <option value="Karadeniz">Karadeniz</option>
+        <option value="Akdeniz">Akdeniz</option>
+        <option value="Ege">Ege</option>
+        <option value="Ic_Anadolu">İç Anadolu</option>
+        <option value="Dogu_Anadolu">Doğu Anadolu</option>
+        <option value="Guneydogu_Anadolu">Güneydoğu Anadolu</option>
+      </select>
+  
+      <label for="sehirSec">Bir şehir seçin:</label>
+      <select id="sehirSec" disabled>
+        <option value="">--Şehir Seçin--</option>
+      </select>
+  
+      <h2 id="sehirBaslik"></h2>
+  
+      <div id="geziYerleri"></div>
+    </div>
+  </div>
+  
+  <script>
+    function girisYap() {
+      document.getElementById('giris-ekrani').style.display = 'none';
+      document.getElementById('sehir-secim-ekrani').style.display = 'block';
+    }
+    </script>
+    
 <!-- Verileri Yükleyecek Script'ler -->
 <script src="data.js"></script> <!-- Şehir verilerini buradan alacak -->
 <script src="script.js"></script> <!-- Ana işleyişi sağlayan script -->
