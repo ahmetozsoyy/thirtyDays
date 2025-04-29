@@ -207,6 +207,60 @@ const sehirVerileri = {
   }
 ],
 
+  "Balıkesir": [
+    {
+      isim: "Cunda Adası",
+      aciklama: "Tarihi taş evleri ve balık restoranlarıyla ünlü bir ada.",
+      resim: "img/cunda.jpg"
+    },
+    {
+      isim: "Manyas Kuş Cenneti",
+      aciklama: "Göçmen kuşları izleyebileceğiniz doğal bir milli park.",
+      resim: "img/kuscenneti.jpg"
+    },
+    {
+      isim: "Kaz Dağları",
+      aciklama: "Temiz havası ve doğa yürüyüşü parkurlarıyla meşhur bir dağ bölgesi.",
+      resim: "img/kazdaglari.jpg"
+    }
+  ],
+
+  "Çanakkale": [
+    {
+      isim: "Truva Antik Kenti",
+      aciklama: "Efsanevi Truva savaşının geçtiği antik kent kalıntıları.",
+      resim: "img/truva.jpg"
+    },
+    {
+      isim: "Çanakkale Şehitliği",
+      aciklama: "Çanakkale Savaşı'nda hayatını kaybeden askerler anısına yapılmış anıt.",
+      resim: "img/sehitlik.jpg"
+    },
+    {
+      isim: "Assos Antik Kenti",
+      aciklama: "Felsefeci Aristoteles'in bir dönem yaşadığı tarihi kent.",
+      resim: "img/assos.jpg"
+    }
+  ],
+
+  "Bilecik": [
+    {
+      isim: "Şeyh Edebali Türbesi",
+      aciklama: "Osmanlı Devleti'nin manevi kurucusu olarak kabul edilen Şeyh Edebali'nin türbesi.",
+      resim: "img/seyhedebali.jpg"
+    },
+    {
+      isim: "Osman Gazi Heykeli",
+      aciklama: "Osmanlı Devleti'nin kurucusu Osman Gazi'nin anısını yaşatan büyük bir heykel.",
+      resim: "img/osmangazi.jpg"
+    },
+    {
+      isim: "Saat Kulesi",
+      aciklama: "Şehrin simgelerinden biri olan tarihi saat kulesi.",
+      resim: "img/saatkulesibil.jpg"
+    }
+  ]
+
 
   
 };
