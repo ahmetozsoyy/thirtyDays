@@ -259,6 +259,59 @@ const sehirVerileri = {
       aciklama: "Şehrin simgelerinden biri olan tarihi saat kulesi.",
       resim: "img/saatkulesibil.jpg"
     }
+  ],
+  "Sakarya": [
+    {
+      isim: "Sapanca Gölü",
+      aciklama: "Doğayla iç içe yürüyüşler ve göl kenarında huzurlu vakit geçirmek için ideal bir yer.",
+      resim: "img/sapanca.jpg"
+    },
+    {
+      isim: "Maşukiye",
+      aciklama: "Şelaleleri, doğal güzellikleri ve alabalık restoranlarıyla ünlü.",
+      resim: "img/masukiye.jpg"
+    },
+    {
+      isim: "Ormanpark",
+      aciklama: "Şehir merkezine yakın, doğa içinde yürüyüş ve dinlenme alanı.",
+      resim: "img/ormanpark.jpg"
+    }
+  ],
+
+  "Kocaeli": [
+    {
+      isim: "Kartepe",
+      aciklama: "Kış turizmi ve doğa yürüyüşleri için popüler bir dağ.",
+      resim: "img/kartepe.jpg"
+    },
+    {
+      isim: "Seka Park",
+      aciklama: "İzmit Körfezi kenarında büyük ve modern bir park alanı.",
+      resim: "img/sekapark.jpg"
+    },
+    {
+      isim: "Kocaeli Bilim Merkezi",
+      aciklama: "Çocuklar ve gençler için interaktif bilim etkinlikleri sunan merkez.",
+      resim: "img/bilim_merkezi.jpg"
+    }
+  ],
+
+  "Yalova": [
+    {
+      isim: "Termal Kaplıcaları",
+      aciklama: "Şifalı sularıyla ünlü, Türkiye’nin önemli sağlık turizmi noktalarından biri.",
+      resim: "img/termal.jpg"
+    },
+    {
+      isim: "Yürüyen Köşk",
+      aciklama: "Atatürk’ün doğaya verdiği önemi simgeleyen tarihi köşk.",
+      resim: "img/yuruyen_kosk.jpg"
+    },
+    {
+      isim: "Sudüşen Şelalesi",
+      aciklama: "Doğayla iç içe piknik ve yürüyüş alanı, güzel manzaralar sunar.",
+      resim: "img/sudusen.jpg"
+    }
   ]
 
 
