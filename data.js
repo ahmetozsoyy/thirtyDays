@@ -312,7 +312,62 @@ const sehirVerileri = {
       aciklama: "Doğayla iç içe piknik ve yürüyüş alanı, güzel manzaralar sunar.",
       resim: "img/sudusen.jpg"
     }
-  ]
+  ],
+
+  "Amasya": [
+  {
+    "isim": "Amasya Kalesi",
+    "aciklama": "Pontus Krallığı dönemine ait kalıntılarıyla tarih kokan yüksek konumlu bir kale.",
+    "resim": "img/amasya_kalesi.jpg"
+  },
+  {
+    "isim": "Kral Kaya Mezarları",
+    "aciklama": "Yeşilırmak kenarında kayalara oyulmuş antik mezarlar, etkileyici bir manzara sunar.",
+    "resim": "img/kral_mezarlari.jpg"
+  },
+  {
+    "isim": "Hazeranlar Konağı",
+    "aciklama": "Osmanlı dönemine ait zarif bir konak, müze olarak ziyaretçilerini ağırlar.",
+    "resim": "img/hazeranlar_konagi.jpg"
+  }
+],
+
+"Artvin": [
+  {
+    "isim": "Karagöl-Sahara Milli Parkı",
+    "aciklama": "Doğal güzellikleri ve göletiyle ünlü, kamp ve doğa yürüyüşü için ideal bir alan.",
+    "resim": "img/karagol_sahara.jpg"
+  },
+  {
+    "isim": "Mençuna Şelalesi",
+    "aciklama": "Artvin’in en büyük şelalelerinden biri, yemyeşil doğa içinde gizli bir cennet.",
+    "resim": "img/mencuna_selalesi.jpg"
+  },
+  {
+    "isim": "Atatepe",
+    "aciklama": "Türkiye’nin en büyük Atatürk heykelinin bulunduğu, Artvin manzarasına hakim bir tepe.",
+    "resim": "img/atatepe.jpg"
+  }
+],
+
+"Bartın": [
+  {
+    "isim": "Amasra",
+    "aciklama": "Denizle bütünleşmiş tarihi bir kasaba, balık restoranları ve manzarasıyla meşhurdur.",
+    "resim": "img/amasra.jpg"
+  },
+  {
+    "isim": "Küre Dağları Milli Parkı",
+    "aciklama": "Yürüyüş parkurları ve doğal zenginlikleriyle doğa severler için bir cennet.",
+    "resim": "img/kure_daglari.jpg"
+  },
+  {
+    "isim": "İnkumu Plajı",
+    "aciklama": "Bartın’a yakın konumda temiz denizi ve sahiliyle popüler bir plaj.",
+    "resim": "img/inkumu_plaji.jpg"
+  }
+]
+
 
 
   
