@@ -366,7 +366,61 @@ const sehirVerileri = {
     "aciklama": "Bartın’a yakın konumda temiz denizi ve sahiliyle popüler bir plaj.",
     "resim": "img/inkumu_plaji.jpg"
   }
+],
+"Bayburt": [
+  {
+    "isim": "Bayburt Kalesi",
+    "aciklama": "Tarihi İpek Yolu üzerinde yer alan, şehre hakim konumda etkileyici bir kale.",
+    "resim": "img/bayburt_kalesi.jpg"
+  },
+  {
+    "isim": "Baksı Müzesi",
+    "aciklama": "Modern sanat ile geleneksel el sanatlarını birleştiren, tepede kurulmuş özel bir müze.",
+    "resim": "img/baksi_muzesi.jpg"
+  },
+  {
+    "isim": "Çimağıl Mağarası",
+    "aciklama": "Sarkıt ve dikitlerle bezeli, doğa severlerin ilgisini çeken bir mağara.",
+    "resim": "img/cimagil_magarasi.jpg"
+  }
+],
+
+"Bolu": [
+  {
+    "isim": "Abant Gölü",
+    "aciklama": "Doğa yürüyüşleri, piknik ve fotoğrafçılık için ideal, büyüleyici bir göl manzarası.",
+    "resim": "img/abant_golu.jpg"
+  },
+  {
+    "isim": "Yedigöller Milli Parkı",
+    "aciklama": "Bolu’nun en meşhur doğa harikası, yedi gölden oluşan büyüleyici bir milli park.",
+    "resim": "img/yedigoller.jpg"
+  },
+  {
+    "isim": "Gölcük Tabiat Parkı",
+    "aciklama": "Çam ağaçlarıyla çevrili göl ve huzur dolu atmosferiyle popüler bir mesire alanı.",
+    "resim": "img/golcuk.jpg"
+  }
+],
+
+"Çorum": [
+  {
+    "isim": "Hattuşa Antik Kenti",
+    "aciklama": "Hititler’in başkenti olan, UNESCO Dünya Mirası listesinde yer alan tarihi kent.",
+    "resim": "img/hattusa.jpg"
+  },
+  {
+    "isim": "Alacahöyük Ören Yeri",
+    "aciklama": "Hitit medeniyetine ait kalıntılarla dolu, Türkiye’nin en önemli arkeolojik alanlarından biri.",
+    "resim": "img/alacahoyuk.jpg"
+  },
+  {
+    "isim": "Çorum Müzesi",
+    "aciklama": "Bölgede yapılan kazılardan elde edilen Hitit, Frig ve Roma dönemine ait eserlerin sergilendiği müze.",
+    "resim": "img/corum_muzesi.jpg"
+  }
 ]
+
 
 
 
