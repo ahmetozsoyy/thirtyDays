@@ -66,25 +66,5 @@ document.addEventListener("DOMContentLoaded", () => {
       sehirBaslik.textContent = ""; // Şehir başlığını temizle
     }
   });
-  const darkButton = document.querySelector(".darkMode");
-  const heads = document.querySelector("#sehir-secim-ekrani h1");
-  const conten = document.querySelector(".container");
-
-
-  darkButton.addEventListener("click", () => {
-    darkButton.classList.toggle("dark");
-    if(darkButton.classList.contains("dark")) {
-       conten.style= 'background:  #2D2D2D';
-       heads.style.color = '#F8F8FF';
-    }
-    else{
-      conten.style= 'background-color: white';
-      heads.style.color=	'black';
-    }
-    console.log(darkButton);
-
-
-
-  })
-
+ 
 });

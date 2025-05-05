@@ -12,16 +12,17 @@
    
 
   <div id="giris-ekrani">
+    <style>
+        #giris-ekrani{isolation: isolate;}
+    </style>
     <h1>Türkiye Gezi Rehberi</h1>
     <button onclick="girisYap()">Hadi Başlayalım!</button>
+  
   </div>
 
   <div id="sehir-secim-ekrani" style="display: none;">
     <div class="container">
-      <div class="darkMode">
-        <i class="fa-solid fa-moon"></i>
-       
-      </div>
+
    
       <h1>Gezi Rehberi</h1>
   
@@ -56,6 +57,28 @@
     }
     </script>
     
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode().showWidget();
+  }
+  const options = {
+  bottom: '8px', // default: '32px'
+  right: 'unset', // default: '32px'
+  left: '32px', // default: 'unset'
+  time: '0.7s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: false, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+}
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+</script>
 <!-- Verileri Yükleyecek Script'ler -->
 <script src="data.js"></script> <!-- Şehir verilerini buradan alacak -->
 <script src="script.js"></script> <!-- Ana işleyişi sağlayan script -->

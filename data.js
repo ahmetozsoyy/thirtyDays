@@ -419,7 +419,61 @@ const sehirVerileri = {
     "aciklama": "Bölgede yapılan kazılardan elde edilen Hitit, Frig ve Roma dönemine ait eserlerin sergilendiği müze.",
     "resim": "img/corum_muzesi.jpg"
   }
+],
+"Düzce": [
+  {
+    "isim": "Güzeldere Şelalesi Tabiat Parkı",
+    "aciklama": "Doğayla iç içe yürüyüş yolları ve etkileyici şelalesiyle ünlü bir tabiat parkı.",
+    "resim": "img/guzeldere.jpg"
+  },
+  {
+    "isim": "Aydınpınar Şelaleleri",
+    "aciklama": "Orman içindeki yürüyüş parkurları ve doğal güzellikleriyle ziyaretçilerin uğrak noktası.",
+    "resim": "img/aydinpinar.jpg"
+  },
+  {
+    "isim": "Konuralp Müzesi",
+    "aciklama": "Roma dönemine ait eserlerin sergilendiği, Düzce’nin tarihi geçmişine ışık tutan müze.",
+    "resim": "img/konuralp.jpg"
+  }
+],
+
+"Gümüşhane": [
+  {
+    "isim": "Santa Harabeleri",
+    "aciklama": "Taş mimarisiyle dikkat çeken, 17. yüzyıldan kalma tarihi bir Rum yerleşim yeri.",
+    "resim": "img/santa.jpg"
+  },
+  {
+    "isim": "Karaca Mağarası",
+    "aciklama": "Sarkıt ve dikitleriyle ünlü, Türkiye'nin en etkileyici mağaralarından biri.",
+    "resim": "img/karaca_magarasi.jpg"
+  },
+  {
+    "isim": "Torul Cam Seyir Terası",
+    "aciklama": "Yüksek bir tepede camdan yapılmış teras ile eşsiz manzaralar sunan turistik nokta.",
+    "resim": "img/torul_terasi.jpg"
+  }
+],
+
+"Giresun": [
+  {
+    "isim": "Giresun Adası",
+    "aciklama": "Karadeniz’in içinde gezilebilen tek ada olan Giresun Adası, mitolojik önemiyle bilinir.",
+    "resim": "img/giresun_adasi.jpg"
+  },
+  {
+    "isim": "Kuzalan Şelalesi ve Mavi Göl",
+    "aciklama": "Berrak mavi rengiyle dikkat çeken doğal göl ve şelale kompleksi.",
+    "resim": "img/kuzalan.jpg"
+  },
+  {
+    "isim": "Giresun Kalesi",
+    "aciklama": "Şehir merkezinde denize nazır bir tepede yer alan, tarihi ve manzarasıyla öne çıkan kale.",
+    "resim": "img/giresun_kalesi.jpg"
+  }
 ]
+
 
 
 
