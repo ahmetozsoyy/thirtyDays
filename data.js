@@ -472,7 +472,61 @@ const sehirVerileri = {
     "aciklama": "Şehir merkezinde denize nazır bir tepede yer alan, tarihi ve manzarasıyla öne çıkan kale.",
     "resim": "img/giresun_kalesi.jpg"
   }
+],
+"Karabük": [
+  {
+    "isim": "Safranbolu Evleri",
+    "aciklama": "UNESCO Dünya Mirası listesinde yer alan, Osmanlı döneminden kalma tarihi Türk evleri.",
+    "resim": "img/safranbolu_evleri.jpg"
+  },
+  {
+    "isim": "Tokatlı Kanyonu ve Kristal Teras",
+    "aciklama": "Derin kanyon manzarasıyla dikkat çeken cam teras, doğaseverlerin ilgisini çekiyor.",
+    "resim": "img/kristal_teras.jpg"
+  },
+  {
+    "isim": "Yörük Köyü",
+    "aciklama": "Tarihi dokusunu koruyan, geleneksel yaşam tarzını yansıtan otantik bir köy.",
+    "resim": "img/yoruk_koyu.jpg"
+  }
+],
+
+"Kastamonu": [
+  {
+    "isim": "Ilgaz Dağı Milli Parkı",
+    "aciklama": "Kış turizmi ve doğa yürüyüşleriyle ünlü, dört mevsim doğa severlerin uğrak noktası.",
+    "resim": "img/ilgaz_dagi.jpg"
+  },
+  {
+    "isim": "Valla Kanyonu",
+    "aciklama": "Dünyanın en derin 2. kanyonu, zorlu yürüyüş rotaları ve manzaralarıyla bilinir.",
+    "resim": "img/valla_kanyonu.jpg"
+  },
+  {
+    "isim": "Kastamonu Kalesi",
+    "aciklama": "Şehrin merkezinde yer alan, Bizans dönemine ait tarihi bir kale.",
+    "resim": "img/kastamonu_kalesi.jpg"
+  }
+],
+
+"Ordu": [
+  {
+    "isim": "Boztepe Teleferik",
+    "aciklama": "Şehri yukarıdan izleme fırsatı sunan, eşsiz manzaralara sahip teleferik yolculuğu.",
+    "resim": "img/boztepe.jpg"
+  },
+  {
+    "isim": "Ulugöl Tabiat Parkı",
+    "aciklama": "Doğal gölü ve çevresindeki yürüyüş alanlarıyla huzur dolu bir doğa kaçamağı.",
+    "resim": "img/ulugol.jpg"
+  },
+  {
+    "isim": "Perşembe Yaylası",
+    "aciklama": "Serin havası, doğal güzellikleri ve yayla yaşamıyla Ordu’nun öne çıkan noktalarından biri.",
+    "resim": "img/persembe_yaylasi.jpg"
+  }
 ]
+
 
 
 
