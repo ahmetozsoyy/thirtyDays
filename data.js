@@ -525,7 +525,61 @@ const sehirVerileri = {
     "aciklama": "Serin havası, doğal güzellikleri ve yayla yaşamıyla Ordu’nun öne çıkan noktalarından biri.",
     "resim": "img/persembe_yaylasi.jpg"
   }
+],
+"Rize": [
+  {
+    "isim": "Ayder Yaylası",
+    "aciklama": "Doğal kaplıcaları, yeşil doğası ve sisli manzaralarıyla Karadeniz'in en popüler yaylalarından biridir.",
+    "resim": "img/ayder_yaylasi.jpg"
+  },
+  {
+    "isim": "Zil Kale",
+    "aciklama": "Fırtına Deresi üzerine kurulmuş, dağlar arasında yükselen tarihi bir kale.",
+    "resim": "img/zil_kale.jpg"
+  },
+  {
+    "isim": "Fırtına Deresi",
+    "aciklama": "Rafting, doğa yürüyüşü ve fotoğrafçılık için mükemmel bir vadi ve nehir.",
+    "resim": "img/firtina_deresi.jpg"
+  }
+],
+
+"Samsun": [
+  {
+    "isim": "Bandırma Vapuru Müzesi",
+    "aciklama": "Atatürk’ün Samsun’a gelişini simgeleyen tarihi vapurun birebir kopyası, müze olarak hizmet vermektedir.",
+    "resim": "img/bandirma_vapuru.jpg"
+  },
+  {
+    "isim": "Amisos Tepesi",
+    "aciklama": "Teleferik ile çıkılan tepe, deniz manzarası ve Pontus krallarına ait mezarlarla dikkat çeker.",
+    "resim": "img/amisos_tepesi.jpg"
+  },
+  {
+    "isim": "Atatürk Anıtı",
+    "aciklama": "Cumhuriyet Meydanı'nda yer alan ve Samsun’un simgesi hâline gelen bronz Atatürk heykeli.",
+    "resim": "img/ataturk_aniti.jpg"
+  }
+],
+
+"Sinop": [
+  {
+    "isim": "Sinop Cezaevi",
+    "aciklama": "Tarihi bir zindan olarak kullanılan ve bugün müze hâline getirilen, Anadolu’nun Alkatraz’ı.",
+    "resim": "img/sinop_cezaevi.jpg"
+  },
+  {
+    "isim": "Hamsilos Koyu",
+    "aciklama": "Türkiye’nin tek fiyordu olarak bilinen, doğal ve huzur dolu bir koy.",
+    "resim": "img/hamsilos_koyu.jpg"
+  },
+  {
+    "isim": "İnceburun Feneri",
+    "aciklama": "Türkiye'nin en kuzey noktası olan burunda yer alan tarihi deniz feneri.",
+    "resim": "img/inceburun_feneri.jpg"
+  }
 ]
+
 
 
 
