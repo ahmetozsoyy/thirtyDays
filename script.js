@@ -66,5 +66,20 @@ document.addEventListener("DOMContentLoaded", () => {
       sehirBaslik.textContent = ""; // Şehir başlığını temizle
     }
   });
+  // Giriş ekranından şehir seçimine yumuşak geçiş
+document.getElementById("baslaBtn").addEventListener("click", function () {
+  const girisEkrani = document.getElementById("giris-ekrani");
+  const sehirEkrani = document.getElementById("sehir-secim-ekrani");
+
+  // Giriş ekranını yavaşça gizle
+  girisEkrani.classList.add("fade-out");
+
+  // 700ms sonra şehir ekranını göster
+  setTimeout(() => {
+    girisEkrani.style.display = "none";
+    sehirEkrani.classList.add("show");
+  }, 700);
+});
+
  
 });

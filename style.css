@@ -130,6 +130,7 @@ body {
 }
 
 #giris-ekrani {
+  transition: 0.3s all ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,4 +200,28 @@ body {
     max-width: 100%;
     padding: 12px 15px;
   }
+
 }
+/* Geçiş efektleri */
+.fade {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  visibility: visible;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fade-in {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fade-in.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease;
+}
+

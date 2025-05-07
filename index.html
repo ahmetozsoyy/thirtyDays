@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gezi Rehberi</title>
-  <link rel="stylesheet" href="style.css"> <!-- style.css burada bağlanıyor -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
 
-   
-
-  <div id="giris-ekrani">
-    <style>
-        #giris-ekrani{isolation: isolate;}
-    </style>
+  <!-- Giriş ekranı -->
+  <div id="giris-ekrani" class="fade">
     <h1>Türkiye Gezi Rehberi</h1>
-    <button onclick="girisYap()"> -Başlayalım!-</button>
-  
+    <button id="baslaBtn">-Başlayalım!-</button>
   </div>
 
-  <div id="sehir-secim-ekrani" style="display: none;">
+  <!-- Şehir seçim ekranı -->
+  <div id="sehir-secim-ekrani" class="fade-in">
     <div class="container">
-
-   
       <h1>Gezi Rehberi</h1>
-  
+
       <label for="bolgeSec">Bir bölge seçin:</label>
       <select id="bolgeSec">
         <option value="">--Bölge Seçin--</option>
@@ -37,50 +37,38 @@
         <option value="Dogu_Anadolu">Doğu Anadolu</option>
         <option value="Guneydogu_Anadolu">Güneydoğu Anadolu</option>
       </select>
-  
+
       <label for="sehirSec">Bir şehir seçin:</label>
       <select id="sehirSec" disabled>
         <option value="">--Şehir Seçin--</option>
       </select>
-  
+
       <h2 id="sehirBaslik"></h2>
-  
       <div id="geziYerleri"></div>
     </div>
   </div>
 
-
+  <!-- Dark Mode -->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
   <script>
-    function girisYap() {
-      document.getElementById('giris-ekrani').style.display = 'none';
-      document.getElementById('sehir-secim-ekrani').style.display = 'block';
-    }
-    </script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-<script>
-  function addDarkmodeWidget() {
-    new Darkmode().showWidget();
-  }
-  const options = {
-  bottom: '8px', // default: '32px'
-  right: 'unset', // default: '32px'
-  left: '32px', // default: 'unset'
-  time: '0.7s', // default: '0.3s'
-  mixColor: '#fff', // default: '#fff'
-  backgroundColor: '#fff',  // default: '#fff'
-  buttonColorDark: '#100f2c',  // default: '#100f2c'
-  buttonColorLight: '#fff', // default: '#fff'
-  saveInCookies: false, // default: true,
-  label: '🌓', // default: ''
-  autoMatchOsTheme: true // default: true
-}
+    const options = {
+      bottom: '8px',
+      left: '32px',
+      time: '0.7s',
+      mixColor: '#fff',
+      backgroundColor: '#fff',
+      buttonColorDark: '#100f2c',
+      buttonColorLight: '#fff',
+      saveInCookies: false,
+      label: '🌓',
+      autoMatchOsTheme: true
+    };
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+  </script>
 
-const darkmode = new Darkmode(options);
-darkmode.showWidget();
-</script>
-<!-- Verileri Yükleyecek Script'ler -->
-<script src="data.js"></script> <!-- Şehir verilerini buradan alacak -->
-<script src="script.js"></script> <!-- Ana işleyişi sağlayan script -->
+  <!-- Harici script dosyaları -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
