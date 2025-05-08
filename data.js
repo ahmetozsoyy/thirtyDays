@@ -578,7 +578,61 @@ const sehirVerileri = {
     "aciklama": "Türkiye'nin en kuzey noktası olan burunda yer alan tarihi deniz feneri.",
     "resim": "img/inceburun_feneri.jpg"
   }
+],
+"Tokat": [
+  {
+    "isim": "Ballıca Mağarası",
+    "aciklama": "Dünyanın en büyük ve en etkileyici mağaralarından biri, sarkıt ve dikitleriyle ünlüdür.",
+    "resim": "img/ballica_magarasi.jpg"
+  },
+  {
+    "isim": "Tokat Kalesi",
+    "aciklama": "Şehre hâkim konumdaki kale, Roma dönemine kadar uzanan tarihiyle dikkat çeker.",
+    "resim": "img/tokat_kalesi.jpg"
+  },
+  {
+    "isim": "Gök Medrese",
+    "aciklama": "Selçuklu dönemine ait taş işçiliğiyle öne çıkan tarihi bir medrese.",
+    "resim": "img/gok_medrese.jpg"
+  }
+],
+
+"Zonguldak": [
+  {
+    "isim": "Gökgöl Mağarası",
+    "aciklama": "Türkiye'nin en uzun mağaralarından biri olan Gökgöl Mağarası, yer altı oluşumlarıyla dikkat çeker.",
+    "resim": "img/gokgol_magarasi.jpg"
+  },
+  {
+    "isim": "Filyos Antik Kenti",
+    "aciklama": "Tarihi M.Ö. 7. yüzyıla dayanan antik şehir kalıntılarına ev sahipliği yapar.",
+    "resim": "img/filyos.jpg"
+  },
+  {
+    "isim": "Kozlu Sahili",
+    "aciklama": "Zonguldak merkezine yakın, yürüyüş yolları ve deniz manzarasıyla öne çıkan sahil.",
+    "resim": "img/kozlu_sahili.jpg"
+  }
+],
+
+"Adana": [
+  {
+    "isim": "Taş Köprü",
+    "aciklama": "Roma döneminden kalma, dünyanın hâlâ kullanılan en eski taş köprülerinden biridir.",
+    "resim": "img/tas_kopru.jpg"
+  },
+  {
+    "isim": "Sabancı Merkez Camii",
+    "aciklama": "Türkiye'nin en büyük camilerinden biri olan Sabancı Merkez Camii, mimarisiyle büyüler.",
+    "resim": "img/sabanci_camii.jpg"
+  },
+  {
+    "isim": "Adana Arkeoloji Müzesi",
+    "aciklama": "Çukurova bölgesinin tarihine ışık tutan çok sayıda eserin sergilendiği müze.",
+    "resim": "img/adana_arkeoloji.jpg"
+  }
 ]
+
 
 
 
