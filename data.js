@@ -631,6 +631,57 @@ const sehirVerileri = {
     "aciklama": "Çukurova bölgesinin tarihine ışık tutan çok sayıda eserin sergilendiği müze.",
     "resim": "img/adana_arkeoloji.jpg"
   }
+],
+"Burdur": [
+  {
+    "isim": "Salda Gölü",
+    "aciklama": "Bembeyaz kumsalları ve turkuaz rengiyle Türkiye’nin Maldivleri olarak bilinir.",
+    "resim": "img/salda_golu.jpg"
+  },
+  {
+    "isim": "Sagalassos Antik Kenti",
+    "aciklama": "Burdur’un Ağlasun ilçesinde yer alan, Roma döneminden kalma etkileyici antik kent.",
+    "resim": "img/sagalassos.jpg"
+  },
+  {
+    "isim": "İnsuyu Mağarası",
+    "aciklama": "Türkiye’nin turizme açılan ilk mağarası olan İnsuyu, sarkıt ve dikitleriyle meşhurdur.",
+    "resim": "img/insuyu_magarasi.jpg"
+  }
+],
+"Hatay": [
+  {
+    "isim": "St. Pierre Kilisesi",
+    "aciklama": "Hristiyanlık tarihinin en eski kiliselerinden biri olarak kabul edilir.",
+    "resim": "img/st_pierre.jpg"
+  },
+  {
+    "isim": "Harbiye Şelaleleri",
+    "aciklama": "Doğal güzelliği ve serin ortamıyla Hatay’ın popüler dinlenme alanlarından biri.",
+    "resim": "img/harbiye.jpg"
+  },
+  {
+    "isim": "Hatay Arkeoloji Müzesi",
+    "aciklama": "Dünyanın en zengin mozaik koleksiyonlarından birine ev sahipliği yapar.",
+    "resim": "img/hatay_muze.jpg"
+  }
+],
+"Isparta": [
+  {
+    "isim": "Eğirdir Gölü",
+    "aciklama": "Türkiye’nin en temiz tatlı su göllerinden biri olan Eğirdir, doğa severlerin gözdesidir.",
+    "resim": "img/egirdir_golu.jpg"
+  },
+  {
+    "isim": "Lavanta Tarlaları (Kuyucak Köyü)",
+    "aciklama": "Yaz aylarında mor renge bürünen tarlalarla görsel şölen sunar.",
+    "resim": "img/lavanta.jpg"
+  },
+  {
+    "isim": "Zindan Mağarası",
+    "aciklama": "Aksu ilçesinde bulunan mağara, devasa galerileri ve sarkıtlarıyla dikkat çeker.",
+    "resim": "img/zindan_magarasi.jpg"
+  }
 ]
 
 
