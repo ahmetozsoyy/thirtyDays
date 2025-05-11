@@ -682,7 +682,59 @@ const sehirVerileri = {
     "aciklama": "Aksu ilçesinde bulunan mağara, devasa galerileri ve sarkıtlarıyla dikkat çeker.",
     "resim": "img/zindan_magarasi.jpg"
   }
+],
+"Mersin": [
+  {
+    "isim": "Kızkalesi",
+    "aciklama": "Denizin ortasındaki tarihi kale, Mersin’in en ünlü turistik noktalarından biridir.",
+    "resim": "img/kizkalesi.jpg"
+  },
+  {
+    "isim": "Cennet-Cehennem Obrukları",
+    "aciklama": "Mitolojik öykülere konu olmuş, devasa çöküntü yapılarıyla etkileyici doğal oluşumlardır.",
+    "resim": "img/cennet_cehennem.jpg"
+  },
+  {
+    "isim": "Mamure Kalesi",
+    "aciklama": "Orta Çağ’dan kalma deniz kıyısındaki büyük kale, tarih ve deniz manzarasını birleştirir.",
+    "resim": "img/mamure_kalesi.jpg"
+  }
+],
+"Osmaniye": [
+  {
+    "isim": "Kastabala Antik Kenti",
+    "aciklama": "Roma dönemine ait kalıntılarıyla ünlü, tarihi bir ören yeri.",
+    "resim": "img/kastabala.jpg"
+  },
+  {
+    "isim": "Haruniye Kaplıcaları",
+    "aciklama": "Termal sularıyla bilinen, şifa arayanların uğrak noktası olan kaplıcalar.",
+    "resim": "img/haruniye.jpg"
+  },
+  {
+    "isim": "Karatepe-Aslantaş Açık Hava Müzesi",
+    "aciklama": "Hitit dönemine ait eserlerin sergilendiği açık hava müzesi.",
+    "resim": "img/karatepe.jpg"
+  }
+],
+"Kahramanmaraş": [
+  {
+    "isim": "Germanicia Mozaikleri",
+    "aciklama": "Roma dönemine ait, yer altından çıkarılmış benzersiz mozaikler.",
+    "resim": "img/germanicia.jpg"
+  },
+  {
+    "isim": "Ahir Dağı",
+    "aciklama": "Doğa yürüyüşü ve yayla turizmi için tercih edilen dağlık alan.",
+    "resim": "img/ahir_dagi.jpg"
+  },
+  {
+    "isim": "Kahramanmaraş Müzesi",
+    "aciklama": "Paleolitik dönemden kalma eserlerden Osmanlı dönemine kadar geniş bir yelpazeye sahip müze.",
+    "resim": "img/maras_muzesi.jpg"
+  }
 ]
+
 
 
 

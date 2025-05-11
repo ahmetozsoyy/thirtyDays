@@ -8,6 +8,7 @@
 }
 
 body {
+  overflow: hidden;
   margin: 0;
   padding: 20px;
   font-family: 'Segoe UI', system-ui, sans-serif;
@@ -130,6 +131,7 @@ body {
 }
 
 #giris-ekrani {
+  
   transition: 0.3s all ease;
   display: flex;
   flex-direction: column;
