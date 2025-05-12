@@ -54,11 +54,18 @@ document.addEventListener("DOMContentLoaded", () => {
       yerler.forEach(yer => {
         const yerDiv = document.createElement("div");
         yerDiv.className = "gezi-karti";
-        yerDiv.innerHTML = `
-          <h2>${yer.isim}</h2>
-          <p>${yer.aciklama}</p>
-          ${yer.resim ? `<img src="${yer.resim}" alt="${yer.isim}">` : ""}
-        `;
+     yerDiv.innerHTML = `
+  <h2>${yer.isim}</h2>
+  <p>${yer.aciklama}</p>
+  ${
+    yer.resim
+      ? `<a href="${yer.resim}" data-lightbox="galeri" data-title="${yer.isim}">
+           <img src="${yer.resim}" alt="${yer.isim}">
+         </a>`
+      : ""
+  }
+`;
+
         geziYerleriDiv.appendChild(yerDiv);
       });
     } else {
@@ -79,6 +86,10 @@ document.getElementById("baslaBtn").addEventListener("click", function () {
     girisEkrani.style.display = "none";
     sehirEkrani.classList.add("show");
   }, 700);
+});
+
+lightbox.option({
+  history: false
 });
 
  
