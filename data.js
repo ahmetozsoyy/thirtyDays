@@ -733,7 +733,59 @@ const sehirVerileri = {
     "aciklama": "Paleolitik dönemden kalma eserlerden Osmanlı dönemine kadar geniş bir yelpazeye sahip müze.",
     "resim": "img/maras_muzesi.jpg"
   }
+],
+"Manisa": [
+  {
+    "isim": "Spil Dağı Milli Parkı",
+    "aciklama": "Doğal güzellikleri ve mitolojik hikâyeleriyle ünlü milli park.",
+    "resim": "img/spil_dagi.jpg"
+  },
+  {
+    "isim": "Aigai Antik Kenti",
+    "aciklama": "Antik Aiolis bölgesinde yer alan, tarihi kalıntılarla dolu antik kent.",
+    "resim": "img/aigai.jpg"
+  },
+  {
+    "isim": "Manisa Müzesi",
+    "aciklama": "Manisa’nın tarihini yansıtan arkeolojik ve etnografik eserlerin sergilendiği müze.",
+    "resim": "img/manisa_muzesi.jpg"
+  }
+],
+"Aydın": [
+  {
+    "isim": "Afrodisias Antik Kenti",
+    "aciklama": "UNESCO Dünya Mirası listesinde yer alan, antik dönemin önemli sanat merkezlerinden biri.",
+    "resim": "img/afrodisias.jpg"
+  },
+  {
+    "isim": "Tralles Antik Kenti",
+    "aciklama": "Aydın’ın merkezinde yer alan antik şehir kalıntıları.",
+    "resim": "img/tralles.jpg"
+  },
+  {
+    "isim": "Aydın Arkeoloji Müzesi",
+    "aciklama": "Afrodisias başta olmak üzere bölgedeki kazılardan çıkan eserlerin sergilendiği müze.",
+    "resim": "img/aydin_muzesi.jpg"
+  }
+],
+"Denizli": [
+  {
+    "isim": "Pamukkale Travertenleri",
+    "aciklama": "Beyaz kalsiyum travertenleriyle ünlü, UNESCO Dünya Mirası listesinde yer alan doğal güzellik.",
+    "resim": "img/pamukkale.jpg"
+  },
+  {
+    "isim": "Hierapolis Antik Kenti",
+    "aciklama": "Pamukkale’nin hemen yanında yer alan antik kent, tiyatro ve nekropol alanıyla dikkat çeker.",
+    "resim": "img/hierapolis.jpg"
+  },
+  {
+    "isim": "Laodikeia Antik Kenti",
+    "aciklama": "Antik çağın önemli ticaret şehirlerinden biri olan geniş arkeolojik alan.",
+    "resim": "img/laodikeia.jpg"
+  }
 ]
+
 
 
 
