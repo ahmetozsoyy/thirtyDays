@@ -784,7 +784,25 @@ const sehirVerileri = {
     "aciklama": "Antik çağın önemli ticaret şehirlerinden biri olan geniş arkeolojik alan.",
     "resim": "img/laodikeia.jpg"
   }
+],
+"Muğla": [
+  {
+    "isim": "Ölüdeniz",
+    "aciklama": "Dünyaca ünlü turkuaz lagünü ve kumsalıyla tanınan, sakin sulara sahip doğal bir cennet.",
+    "resim": "img/oludeniz.jpg"
+  },
+  {
+    "isim": "Bodrum Kalesi",
+    "aciklama": "Saint Jean Şövalyeleri tarafından inşa edilen ve Sualtı Arkeoloji Müzesi'ne ev sahipliği yapan tarihi kale.",
+    "resim": "img/bodrum_kalesi.jpg"
+  },
+  {
+    "isim": "Saklıkent Kanyonu",
+    "aciklama": "Yürüyüş ve serinleme için ideal, derin ve dar kaya duvarlarıyla etkileyici bir doğa harikası.",
+    "resim": "img/saklikent.jpg"
+  }
 ]
+
 
 
 
