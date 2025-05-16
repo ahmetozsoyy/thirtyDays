@@ -801,7 +801,59 @@ const sehirVerileri = {
     "aciklama": "Yürüyüş ve serinleme için ideal, derin ve dar kaya duvarlarıyla etkileyici bir doğa harikası.",
     "resim": "img/saklikent.jpg"
   }
+],
+"Afyonkarahisar": [
+  {
+    "isim": "Afyonkarahisar Kalesi",
+    "aciklama": "Şehrin simgesi olan tarihi kale, yüksek kayalık üzerine kurulmuş ve muhteşem bir manzara sunar.",
+    "resim": "img/afyon_kalesi.jpg"
+  },
+  {
+    "isim": "Frig Vadisi",
+    "aciklama": "Frigler'den kalma kaya anıtları ve doğal güzellikleriyle ünlü geniş bir vadiler ağı.",
+    "resim": "img/frig_vadisi.jpg"
+  },
+  {
+    "isim": "Afyon Müzesi",
+    "aciklama": "Tarihi eserler, Frig ve Roma dönemine ait buluntuların sergilendiği önemli bir müze.",
+    "resim": "img/afyon_muzesi.jpg"
+  }
+],
+"Kütahya": [
+  {
+    "isim": "Kütahya Kalesi",
+    "aciklama": "Şehri kuşbakışı görebileceğiniz konumuyla dikkat çeken tarihi kale.",
+    "resim": "img/kutahya_kalesi.jpg"
+  },
+  {
+    "isim": "Çini Müzesi",
+    "aciklama": "Kütahya'nın ünlü çini sanatına adanmış, Osmanlı döneminden kalan eserlerin yer aldığı müze.",
+    "resim": "img/cini_muzesi.jpg"
+  },
+  {
+    "isim": "Aizanoi Antik Kenti",
+    "aciklama": "Roma dönemine ait Zeus Tapınağı ve tiyatrosuyla bilinen tarihi şehir.",
+    "resim": "img/aizanoi.jpg"
+  }
+],
+"Uşak": [
+  {
+    "isim": "Ulubey Kanyonu",
+    "aciklama": "Dünyanın en büyük ikinci kanyonu olarak bilinen, doğa yürüyüşleri için ideal alan.",
+    "resim": "img/ulubey_kanyonu.jpg"
+  },
+  {
+    "isim": "Blaundus Antik Kenti",
+    "aciklama": "Helenistik döneme ait, etkileyici sütun ve yapı kalıntılarıyla ünlü antik kent.",
+    "resim": "img/blaundus.jpg"
+  },
+  {
+    "isim": "Uşak Arkeoloji Müzesi",
+    "aciklama": "Karun Hazineleri'nin sergilendiği, bölgenin tarihini yansıtan önemli müze.",
+    "resim": "img/usak_muzesi.jpg"
+  }
 ]
+
 
 
 

@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       yerler.forEach(yer => {
         const yerDiv = document.createElement("div");
         yerDiv.className = "gezi-karti";
-     yerDiv.innerHTML = `
+yerDiv.innerHTML = `
   <h2>${yer.isim}</h2>
   <p>${yer.aciklama}</p>
   ${
@@ -64,7 +64,16 @@ document.addEventListener("DOMContentLoaded", () => {
          </a>`
       : ""
   }
+  <iframe 
+    src="https://www.google.com/maps?q=${encodeURIComponent(yer.isim)}&output=embed" 
+    width="100%" height="250" 
+    style="border:0; margin-top: 10px;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
 `;
+
 
         geziYerleriDiv.appendChild(yerDiv);
       });
