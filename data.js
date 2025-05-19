@@ -852,7 +852,115 @@ const sehirVerileri = {
     "aciklama": "Karun Hazineleri'nin sergilendiği, bölgenin tarihini yansıtan önemli müze.",
     "resim": "img/usak_muzesi.jpg"
   }
+],
+"Aksaray": [
+  {
+    "isim": "Ihlara Vadisi",
+    "aciklama": "Melendiz Çayı boyunca uzanan, kaya oyma kiliseleri ve doğal güzellikleriyle ünlü vadi.",
+    "resim": "img/ihlara_vadisi.jpg"
+  },
+  {
+    "isim": "Aksaray Sultanhanı Kervansarayı",
+    "aciklama": "Selçuklu mimarisinin en büyük örneklerinden biri olan tarihi kervansaray.",
+    "resim": "img/sultanhani.jpg"
+  },
+  {
+    "isim": "Hasandağı",
+    "aciklama": "Volkanik dağ, doğa yürüyüşleri ve dağcılık için tercih edilen bölge.",
+    "resim": "img/hasandagi.jpg"
+  }
+],
+
+"Çankırı": [
+  {
+    "isim": "Tuz Mağarası",
+    "aciklama": "Türkiye'nin en büyük tuz rezervlerinden biri olan, yer altı galerileriyle etkileyici mağara.",
+    "resim": "img/tuz_magarasi.jpg"
+  },
+  {
+    "isim": "Çankırı Müzesi",
+    "aciklama": "Fosil filler ve arkeolojik eserlerle dolu zengin koleksiyona sahip şehir müzesi.",
+    "resim": "img/cankiri_muzesi.jpg"
+  },
+  {
+    "isim": "Taş Mescit",
+    "aciklama": "Selçuklu döneminden kalma, taş işçiliğiyle dikkat çeken tarihi yapı.",
+    "resim": "img/tas_mescit.jpg"
+  }
+],
+
+"Konya": [
+  {
+    "isim": "Mevlana Müzesi",
+    "aciklama": "Mevlana Celaleddin Rumi'nin türbesi, dergahı ve müzesi olarak bilinen manevi merkez.",
+    "resim": "img/mevlana_muzesi.jpg"
+  },
+  {
+    "isim": "Çatalhöyük",
+    "aciklama": "Dünyanın en eski yerleşim yerlerinden biri olan, Neolitik döneme ait arkeolojik alan.",
+    "resim": "img/catalhoyuk.jpg"
+  },
+  {
+    "isim": "Alaeddin Tepesi ve Camii",
+    "aciklama": "Selçuklu dönemine ait cami ve şehrin ortasında yer alan tarihi tepe.",
+    "resim": "img/alaeddin_tepe.jpg"
+  }
+],
+"Karaman": [
+  {
+    "isim": "Karaman Kalesi",
+    "aciklama": "Selçuklu döneminden kalma tarihi kale, şehir merkezinde yer alır.",
+    "resim": "img/karaman_kalesi.jpg"
+  },
+  {
+    "isim": "Aktekke Camii",
+    "aciklama": "Mevlana'nın annesi Mümine Hatun’un türbesinin bulunduğu camii.",
+    "resim": "img/aktekke_camii.jpg"
+  },
+  {
+    "isim": "Binbir Kilise",
+    "aciklama": "Karadağ bölgesinde bulunan erken Hristiyanlık dönemine ait kilise kalıntıları.",
+    "resim": "img/binbir_kilise.jpg"
+  }
+],
+"Kırıkkale": [
+  {
+    "isim": "Silah Sanayi Müzesi",
+    "aciklama": "Türk savunma sanayisine ait silah ve mühimmat koleksiyonunun sergilendiği müze.",
+    "resim": "img/silah_muzesi.jpg"
+  },
+  {
+    "isim": "Çeşnigir Köprüsü",
+    "aciklama": "Kızılırmak Nehri üzerindeki Selçuklu dönemine ait taş köprü.",
+    "resim": "img/cesnigir_koprusu.jpg"
+  },
+  {
+    "isim": "Hasandede Camii ve Türbesi",
+    "aciklama": "17. yüzyılda yapılmış cami ve halk arasında kutsal kabul edilen türbe.",
+    "resim": "img/hasandede.jpg"
+  }
+],
+"Kayseri": [
+  {
+    "isim": "Erciyes Dağı",
+    "aciklama": "Kış turizmi açısından önemli bir merkez olan, kayak ve snowboard için uygun volkanik dağ.",
+    "resim": "img/erciyes_dagi.jpg"
+  },
+  {
+    "isim": "Kayseri Kalesi",
+    "aciklama": "Roma, Bizans ve Selçuklu dönemlerinden izler taşıyan tarihi kale.",
+    "resim": "img/kayseri_kalesi.jpg"
+  },
+  {
+    "isim": "Gevher Nesibe Tıp Tarihi Müzesi", 
+    "aciklama": "Dünyanın ilk tıp fakültelerinden biri olan Selçuklu yapısı içinde kurulan müze.",
+    "resim": "img/gevher_nesibe.jpg"
+  }
 ]
+
+
+
+
 
 
 

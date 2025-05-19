@@ -20,8 +20,8 @@ body {
 /* ANA KAP */
 .container {
   transition: 0.3s all ease;
-  max-width: 1860px;
-  height: 860px;
+  max-width: 1850px;
+  height: 850px;
   margin: 0 auto;
   background-color: white;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
@@ -81,7 +81,7 @@ select:focus {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
-  margin-top: 60;
+  margin-top: 50;
 }
 
 .gezi-karti {
@@ -213,17 +213,22 @@ body {
 
 .fade-out {
   opacity: 0;
+  transition: opacity 0.4s ease;
   visibility: hidden;
+  pointer-events: none; /* Böylece tıklanmaz */
 }
 
 .fade-in {
   opacity: 0;
+  transition: opacity 0.4s ease;
   visibility: hidden;
+  pointer-events: none;
 }
 
 .fade-in.show {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.4s ease;
+  pointer-events: auto;
 }
+
 
