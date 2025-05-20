@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const geziYerleriDiv = document.getElementById("geziYerleri");
   const sehirBaslik = document.getElementById("sehirBaslik");
 
-  // Bölge-Şehir verileri
+  // Bölge-Şehir eşlemesi
   const bolgeSehirVerileri = {
     Marmara: ["İstanbul", "Tekirdağ", "Edirne", "Kırklareli", "Balıkesir", "Çanakkale", "Bursa", "Bilecik", "Sakarya", "Kocaeli", "Yalova"],
     Karadeniz: ["Amasya", "Artvin", "Bartın", "Bayburt", "Bolu", "Çorum", "Düzce", "Gümüşhane", "Giresun", "Karabük", "Kastamonu", "Ordu", "Rize", "Samsun", "Sinop", "Tokat", "Trabzon", "Zonguldak"],
@@ -15,15 +15,18 @@ document.addEventListener("DOMContentLoaded", () => {
     Guneydogu_Anadolu: ["Gaziantep", "Diyarbakır", "Şanlıurfa", "Batman", "Adıyaman", "Siirt", "Mardin", "Kilis", "Şırnak"]
   };
 
-  // Bölge seçildiğinde şehir listesini güncelle
+
+
+  // Bölge seçildiğinde şehir dropdown'ını güncelle
   bolgeDropdown.addEventListener("change", () => {
     const secilenBolge = bolgeDropdown.value;
     const sehirler = bolgeSehirVerileri[secilenBolge] || [];
 
-    // Şehir dropdown'ını temizle
     sehirDropdown.innerHTML = "<option value=''>--Şehir Seçin--</option>";
+    geziYerleriDiv.innerHTML = "";
+    sehirBaslik.textContent = "";
 
-    if (secilenBolge && sehirler.length > 0) {
+    if (sehirler.length > 0) {
       sehirler.forEach(sehir => {
         const option = document.createElement("option");
         option.value = sehir;
@@ -34,10 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       sehirDropdown.disabled = true;
     }
-
-    // Gezilecek yerler ve başlığı temizle
-    geziYerleriDiv.innerHTML = "";
-    sehirBaslik.textContent = "";
   });
 
   // Şehir seçildiğinde gezilecek yerleri göster
@@ -47,47 +46,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     geziYerleriDiv.innerHTML = "";
 
-    if (yerler.length > 0) {
-      sehirBaslik.textContent = `${secilenSehir}’da Gezilecek Yerler`;
-      yerler.forEach(yer => {
-        const yerDiv = document.createElement("div");
-        yerDiv.className = "gezi-karti";
-        yerDiv.innerHTML = `
-          <h2>${yer.isim}</h2>
-          <p>${yer.aciklama}</p>
-          ${
-            yer.resim
-              ? `<a href="${yer.resim}" data-lightbox="galeri" data-title="${yer.isim}">
-                   <img src="${yer.resim}" alt="${yer.isim}">
-                 </a>`
-              : ""
-          }
-          <iframe 
-            src="https://www.google.com/maps?q=${encodeURIComponent(yer.isim)}&output=embed" 
-            width="100%" height="250" 
-            style="border:0; margin-top: 10px;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        `;
-        geziYerleriDiv.appendChild(yerDiv);
-      });
-    } else {
-      geziYerleriDiv.innerHTML = "<p>Bu şehirde henüz bir yer bilgisi yok.</p>";
-      sehirBaslik.textContent = "";
+    if (secilenSehir) {
+      if (yerler.length > 0) {
+        sehirBaslik.textContent = `${secilenSehir} Şehrinde Gezilecek Yerler`;
+        yerler.forEach(yer => {
+          const yerDiv = document.createElement("div");
+          yerDiv.className = "gezi-karti";
+          yerDiv.innerHTML = `
+            <h2>${yer.isim}</h2>
+            <p>${yer.aciklama}</p>
+            ${
+              yer.resim
+                ? `<a href="${yer.resim}" data-lightbox="galeri" data-title="${yer.isim}">
+                     <img src="${yer.resim}" alt="${yer.isim}">
+                   </a>`
+                : ""
+            }
+            <iframe 
+              src="https://www.google.com/maps?q=${encodeURIComponent(yer.isim)}&output=embed" 
+              width="100%" height="250" 
+              style="border:0; margin-top: 10px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          `;
+          geziYerleriDiv.appendChild(yerDiv);
+        });
+      } else {
+        sehirBaslik.textContent = `${secilenSehir} için kayıtlı yer bulunamadı`;
+        geziYerleriDiv.innerHTML = "<p>Bu şehirde henüz bir yer bilgisi yok.</p>";
+      }
     }
   });
 
-  // Giriş ekranından şehir seçimine yumuşak geçiş
+  // Giriş ekranından şehir ekranına geçiş
   document.getElementById("baslaBtn").addEventListener("click", () => {
     const girisEkrani = document.getElementById("giris-ekrani");
     const sehirEkrani = document.getElementById("sehir-secim-ekrani");
 
-    // Giriş ekranını yavaşça gizle
     girisEkrani.classList.add("fade-out");
 
-    // 700ms sonra giriş ekranını gizle, seçim ekranını göster
     setTimeout(() => {
       girisEkrani.style.display = "none";
       sehirEkrani.style.display = "block";
@@ -95,10 +94,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 700);
   });
 
-  // Lightbox opsiyonları (isteğe bağlı)
+  // Lightbox ayarları
   if (typeof lightbox !== "undefined") {
     lightbox.option({
-      // history: false
+      // Gerekirse buraya Lightbox ayarları ekleyebilirsin
     });
   }
 });
