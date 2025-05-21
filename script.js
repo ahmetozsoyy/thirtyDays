@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     Guneydogu_Anadolu: ["Gaziantep", "Diyarbakır", "Şanlıurfa", "Batman", "Adıyaman", "Siirt", "Mardin", "Kilis", "Şırnak"]
   };
 
-
+  const favoriler = new Set(); // Favori yerler bellekte tutulur (sayfa yenilenince sıfırlanır)
 
   // Bölge seçildiğinde şehir dropdown'ını güncelle
   bolgeDropdown.addEventListener("change", () => {
@@ -52,16 +52,20 @@ document.addEventListener("DOMContentLoaded", () => {
         yerler.forEach(yer => {
           const yerDiv = document.createElement("div");
           yerDiv.className = "gezi-karti";
+
+          const favoriKey = `${secilenSehir}-${yer.isim}`;
+          const isFavori = favoriler.has(favoriKey);
+          const favoriYazi = isFavori ? "★ Favoriden Çıkar" : "☆ Favorilere Ekle";
+
           yerDiv.innerHTML = `
             <h2>${yer.isim}</h2>
             <p>${yer.aciklama}</p>
-            ${
-              yer.resim
-                ? `<a href="${yer.resim}" data-lightbox="galeri" data-title="${yer.isim}">
-                     <img src="${yer.resim}" alt="${yer.isim}">
-                   </a>`
-                : ""
-            }
+            <button class="favori-btn" data-key="${favoriKey}">${favoriYazi}</button>
+            ${yer.resim ? `
+              <a href="${yer.resim}" data-lightbox="galeri" data-title="${yer.isim}">
+                <img src="${yer.resim}" alt="${yer.isim}">
+              </a>
+            ` : ""}
             <iframe 
               src="https://www.google.com/maps?q=${encodeURIComponent(yer.isim)}&output=embed" 
               width="100%" height="250" 
@@ -71,8 +75,24 @@ document.addEventListener("DOMContentLoaded", () => {
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           `;
+
           geziYerleriDiv.appendChild(yerDiv);
         });
+
+        // Tüm favori butonlarına tıklama işlevi ekle
+        document.querySelectorAll(".favori-btn").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const key = btn.dataset.key;
+            if (favoriler.has(key)) {
+              favoriler.delete(key);
+              btn.textContent = "☆ Favorilere Ekle";
+            } else {
+              favoriler.add(key);
+              btn.textContent = "★ Favoriden Çıkar";
+            }
+          });
+        });
+
       } else {
         sehirBaslik.textContent = `${secilenSehir} için kayıtlı yer bulunamadı`;
         geziYerleriDiv.innerHTML = "<p>Bu şehirde henüz bir yer bilgisi yok.</p>";
@@ -97,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Lightbox ayarları
   if (typeof lightbox !== "undefined") {
     lightbox.option({
-      // Gerekirse buraya Lightbox ayarları ekleyebilirsin
+      // İsteğe bağlı lightbox ayarları
     });
   }
 });

@@ -230,5 +230,18 @@ body {
   visibility: visible;
   pointer-events: auto;
 }
+.favori-btn {
+  background-color: #fff8dc;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.favori-btn:hover {
+  background-color: #ffe79a;
+}
+
 
 
