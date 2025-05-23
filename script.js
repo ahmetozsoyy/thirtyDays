@@ -3,8 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const sehirDropdown = document.getElementById("sehirSec");
   const geziYerleriDiv = document.getElementById("geziYerleri");
   const sehirBaslik = document.getElementById("sehirBaslik");
+  const favorilerBtn = document.getElementById("favorilerBtn");
+  const favorilerDiv = document.getElementById("favorilerAlani");
 
-  // Bölge-Şehir eşlemesi
+  const favoriler = new Set();
+
   const bolgeSehirVerileri = {
     Marmara: ["İstanbul", "Tekirdağ", "Edirne", "Kırklareli", "Balıkesir", "Çanakkale", "Bursa", "Bilecik", "Sakarya", "Kocaeli", "Yalova"],
     Karadeniz: ["Amasya", "Artvin", "Bartın", "Bayburt", "Bolu", "Çorum", "Düzce", "Gümüşhane", "Giresun", "Karabük", "Kastamonu", "Ordu", "Rize", "Samsun", "Sinop", "Tokat", "Trabzon", "Zonguldak"],
@@ -15,9 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     Guneydogu_Anadolu: ["Gaziantep", "Diyarbakır", "Şanlıurfa", "Batman", "Adıyaman", "Siirt", "Mardin", "Kilis", "Şırnak"]
   };
 
-  const favoriler = new Set(); // Favori yerler bellekte tutulur (sayfa yenilenince sıfırlanır)
-
-  // Bölge seçildiğinde şehir dropdown'ını güncelle
   bolgeDropdown.addEventListener("change", () => {
     const secilenBolge = bolgeDropdown.value;
     const sehirler = bolgeSehirVerileri[secilenBolge] || [];
@@ -39,33 +39,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Şehir seçildiğinde gezilecek yerleri göster
   sehirDropdown.addEventListener("change", () => {
     const secilenSehir = sehirDropdown.value;
     const yerler = sehirVerileri[secilenSehir] || [];
 
     geziYerleriDiv.innerHTML = "";
+    favorilerDiv.innerHTML = "";
 
     if (secilenSehir) {
       if (yerler.length > 0) {
         sehirBaslik.textContent = `${secilenSehir} Şehrinde Gezilecek Yerler`;
         yerler.forEach(yer => {
-          const yerDiv = document.createElement("div");
-          yerDiv.className = "gezi-karti";
-
           const favoriKey = `${secilenSehir}-${yer.isim}`;
           const isFavori = favoriler.has(favoriKey);
           const favoriYazi = isFavori ? "★ Favoriden Çıkar" : "☆ Favorilere Ekle";
 
+          const yerDiv = document.createElement("div");
+          yerDiv.className = "gezi-karti";
           yerDiv.innerHTML = `
             <h2>${yer.isim}</h2>
             <p>${yer.aciklama}</p>
-            <button class="favori-btn" data-key="${favoriKey}">${favoriYazi}</button>
+            <button class="favori-btn" data-key="${favoriKey}" data-sehir="${secilenSehir}">${favoriYazi}</button>
             ${yer.resim ? `
               <a href="${yer.resim}" data-lightbox="galeri" data-title="${yer.isim}">
                 <img src="${yer.resim}" alt="${yer.isim}">
-              </a>
-            ` : ""}
+              </a>` : ""}
             <iframe 
               src="https://www.google.com/maps?q=${encodeURIComponent(yer.isim)}&output=embed" 
               width="100%" height="250" 
@@ -75,11 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           `;
-
           geziYerleriDiv.appendChild(yerDiv);
         });
 
-        // Tüm favori butonlarına tıklama işlevi ekle
         document.querySelectorAll(".favori-btn").forEach(btn => {
           btn.addEventListener("click", () => {
             const key = btn.dataset.key;
@@ -100,6 +96,43 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Favoriler butonuna tıklandığında favorileri göster
+  favorilerBtn.addEventListener("click", () => {
+    favorilerDiv.innerHTML = "<h2>Favori Yerler</h2>";
+
+    if (favoriler.size === 0) {
+      favorilerDiv.innerHTML += "<p>Henüz favori eklenmemiş.</p>";
+      return;
+    }
+
+    favoriler.forEach(key => {
+      const [sehir, isim] = key.split("-");
+      const yer = (sehirVerileri[sehir] || []).find(y => y.isim === isim);
+
+      if (yer) {
+        const yerDiv = document.createElement("div");
+        yerDiv.className = "gezi-karti";
+        yerDiv.innerHTML = `
+          <h2>${isim} (${sehir})</h2>
+          <p>${yer.aciklama}</p>
+          ${yer.resim ? `
+            <a href="${yer.resim}" data-lightbox="galeri" data-title="${isim}">
+              <img src="${yer.resim}" alt="${isim}">
+            </a>` : ""}
+          <iframe 
+            src="https://www.google.com/maps?q=${encodeURIComponent(yer.isim)}&output=embed" 
+            width="100%" height="250" 
+            style="border:0; margin-top: 10px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        `;
+        favorilerDiv.appendChild(yerDiv);
+      }
+    });
+  });
+
   // Giriş ekranından şehir ekranına geçiş
   document.getElementById("baslaBtn").addEventListener("click", () => {
     const girisEkrani = document.getElementById("giris-ekrani");
@@ -117,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Lightbox ayarları
   if (typeof lightbox !== "undefined") {
     lightbox.option({
-      // İsteğe bağlı lightbox ayarları
+      // isteğe bağlı
     });
   }
 });

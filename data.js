@@ -956,7 +956,98 @@ const sehirVerileri = {
     "aciklama": "Dünyanın ilk tıp fakültelerinden biri olan Selçuklu yapısı içinde kurulan müze.",
     "resim": "img/gevher_nesibe.jpg"
   }
-]
+],
+"Kırşehir": [
+  {
+    "isim": "Ahi Evran Külliyesi",
+    "aciklama": "Ahilik teşkilatının kurucusu Ahi Evran'ın türbesi ve külliyesi.",
+    "resim": "img/ahi_evran.jpg"
+  },
+  {
+    "isim": "Cacabey Medresesi",
+    "aciklama": "13. yüzyılda gökbilim çalışmaları için inşa edilmiş tarihi medrese.",
+    "resim": "img/cacabey_medresesi.jpg"
+  },
+  {
+    "isim": "Kaman Kalehöyük Arkeoloji Müzesi",
+    "aciklama": "Japon-Türk iş birliğiyle kurulan ve Anadolu tarihine ışık tutan müze.",
+    "resim": "img/kalehoyuk_muzesi.jpg"
+  }
+],
+"Nevşehir": [
+  {
+    "isim": "Göreme Açık Hava Müzesi",
+    "aciklama": "UNESCO Dünya Mirası listesinde yer alan kaya oyma kiliseleriyle ünlü bölge.",
+    "resim": "img/goreme_muzesi.jpg"
+  },
+  {
+    "isim": "Derinkuyu Yeraltı Şehri",
+    "aciklama": "Kapadokya'nın en derin yeraltı şehirlerinden biri.",
+    "resim": "img/derinkuyu.jpg"
+  },
+  {
+    "isim": "Uçhisar Kalesi",
+    "aciklama": "Kapadokya’nın en yüksek noktalarından biri olan doğal kaya kalesi.",
+    "resim": "img/uchisar.jpg"
+  }
+],
+"Niğde": [
+  {
+    "isim": "Niğde Kalesi",
+    "aciklama": "Tarihi Roma dönemine dayanan kale ve çevresi.",
+    "resim": "img/nigde_kalesi.jpg"
+  },
+  {
+    "isim": "Gümüşler Manastırı",
+    "aciklama": "Kayalara oyulmuş Bizans dönemi manastır kompleksi.",
+    "resim": "img/gumusler_manastiri.jpg"
+  },
+  {
+    "isim": "Tyana Antik Kenti",
+    "aciklama": "Roma dönemine ait su kemerleriyle ünlü antik yerleşim.",
+    "resim": "img/tyana.jpg"
+  }
+],
+"Sivas": [
+  {
+    "isim": "Divriği Ulu Camii ve Darüşşifası",
+    "aciklama": "UNESCO Dünya Mirası listesinde yer alan 13. yüzyıl Selçuklu eseri.",
+    "resim": "img/divrigi_ulucami.jpg"
+  },
+  {
+    "isim": "Atatürk ve Kongre Müzesi",
+    "aciklama": "Sivas Kongresi'nin yapıldığı ve Kurtuluş Savaşı kararlarının alındığı bina.",
+    "resim": "img/sivas_kongre.jpg"
+  },
+  {
+    "isim": "Sızır Şelalesi",
+    "aciklama": "Doğal güzelliğiyle ünlü şelale ve piknik alanı.",
+    "resim": "img/sizir_selalesi.jpg"
+  }
+],
+"Yozgat": [
+  {
+    "isim": "Yozgat Çamlığı Milli Parkı",
+    "aciklama": "Türkiye'nin ilk milli parkı olarak bilinen doğal alan.",
+    "resim": "img/camlik_milli_parki.jpg"
+  },
+  {
+    "isim": "Basilica Therma (Sarıkaya Roma Hamamı)",
+    "aciklama": "Roma döneminden kalma antik termal hamam.",
+    "resim": "img/sarikaya_roma_hamami.jpg"
+  },
+  {
+    "isim": "Yozgat Müzesi (Nizamoğlu Konağı)",
+    "aciklama": "Osmanlı dönemine ait tarihi konakta kurulu müze.",
+    "resim": "img/yozgat_muzesi.jpg"
+  }
+],
+
+
+
+
+
+
 
 
 

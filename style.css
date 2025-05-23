@@ -8,9 +8,10 @@
 }
 
 body {
-  overflow: hidden;
+  height: auto;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  overflow-y: auto;
   font-family: 'Segoe UI', system-ui, sans-serif;
   background: var(--light);
   color: var(--text);
@@ -21,7 +22,8 @@ body {
 .container {
   transition: 0.3s all ease;
   max-width: 1850px;
-  height: 850px;
+  height: auto; /* veya hiç tanımlama */
+  padding-bottom: 150px; /* Harita alanı için boşluk */
   margin: 0 auto;
   background-color: white;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
