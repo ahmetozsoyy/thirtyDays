@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const geziYerleriDiv = document.getElementById("geziYerleri");
   const sehirBaslik = document.getElementById("sehirBaslik");
   const favorilerBtn = document.getElementById("favorilerBtn");
-  const favorilerDiv = document.getElementById("favorilerAlani");
+  const favorilerContainer = document.getElementById("favorilerContainer");
+  const favorilerAlani = document.getElementById("favorilerAlani");
 
   const favoriler = new Set();
 
@@ -18,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
     Guneydogu_Anadolu: ["Gaziantep", "Diyarbakır", "Şanlıurfa", "Batman", "Adıyaman", "Siirt", "Mardin", "Kilis", "Şırnak"]
   };
 
+  // Burada sehirVerileri isimli değişkenin data.js'den geldiğini varsayıyorum.
+  // Eğer yoksa, data.js'deki verileri uygun şekilde doldurman gerekir.
+
   bolgeDropdown.addEventListener("change", () => {
     const secilenBolge = bolgeDropdown.value;
     const sehirler = bolgeSehirVerileri[secilenBolge] || [];
@@ -25,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sehirDropdown.innerHTML = "<option value=''>--Şehir Seçin--</option>";
     geziYerleriDiv.innerHTML = "";
     sehirBaslik.textContent = "";
+    favorilerContainer.style.display = "none"; // Favorileri kapat
 
     if (sehirler.length > 0) {
       sehirler.forEach(sehir => {
@@ -44,7 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const yerler = sehirVerileri[secilenSehir] || [];
 
     geziYerleriDiv.innerHTML = "";
-    favorilerDiv.innerHTML = "";
+    favorilerAlani.innerHTML = "";
+    favorilerContainer.style.display = "none"; // Favorileri kapat
+    sehirBaslik.textContent = "";
 
     if (secilenSehir) {
       if (yerler.length > 0) {
@@ -59,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
           yerDiv.innerHTML = `
             <h2>${yer.isim}</h2>
             <p>${yer.aciklama}</p>
-            <button class="favori-btn" data-key="${favoriKey}" data-sehir="${secilenSehir}">${favoriYazi}</button>
+            <button class="favori-btn" data-key="${favoriKey}">${favoriYazi}</button>
             ${yer.resim ? `
               <a href="${yer.resim}" data-lightbox="galeri" data-title="${yer.isim}">
                 <img src="${yer.resim}" alt="${yer.isim}">
@@ -76,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
           geziYerleriDiv.appendChild(yerDiv);
         });
 
+        // Favori butonlarına tıklandığında favoriler setini güncelle
         document.querySelectorAll(".favori-btn").forEach(btn => {
           btn.addEventListener("click", () => {
             const key = btn.dataset.key;
@@ -88,7 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           });
         });
-
       } else {
         sehirBaslik.textContent = `${secilenSehir} için kayıtlı yer bulunamadı`;
         geziYerleriDiv.innerHTML = "<p>Bu şehirde henüz bir yer bilgisi yok.</p>";
@@ -96,44 +103,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Favoriler butonuna tıklandığında favorileri göster
   favorilerBtn.addEventListener("click", () => {
-    favorilerDiv.innerHTML = "<h2>Favori Yerler</h2>";
+    if (favorilerContainer.style.display === "none" || favorilerContainer.style.display === "") {
+      favorilerContainer.style.display = "block";
 
-    if (favoriler.size === 0) {
-      favorilerDiv.innerHTML += "<p>Henüz favori eklenmemiş.</p>";
-      return;
-    }
+      favorilerAlani.innerHTML = "";
 
-    favoriler.forEach(key => {
-      const [sehir, isim] = key.split("-");
-      const yer = (sehirVerileri[sehir] || []).find(y => y.isim === isim);
-
-      if (yer) {
-        const yerDiv = document.createElement("div");
-        yerDiv.className = "gezi-karti";
-        yerDiv.innerHTML = `
-          <h2>${isim} (${sehir})</h2>
-          <p>${yer.aciklama}</p>
-          ${yer.resim ? `
-            <a href="${yer.resim}" data-lightbox="galeri" data-title="${isim}">
-              <img src="${yer.resim}" alt="${isim}">
-            </a>` : ""}
-          <iframe 
-            src="https://www.google.com/maps?q=${encodeURIComponent(yer.isim)}&output=embed" 
-            width="100%" height="250" 
-            style="border:0; margin-top: 10px;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        `;
-        favorilerDiv.appendChild(yerDiv);
+      if (favoriler.size === 0) {
+        favorilerAlani.innerHTML = "<p>Henüz favori eklenmemiş.</p>";
+        return;
       }
-    });
+
+      favoriler.forEach(key => {
+        const [sehir, isim] = key.split("-");
+        const yer = (sehirVerileri[sehir] || []).find(y => y.isim === isim);
+
+        if (yer) {
+          const yerDiv = document.createElement("div");
+          yerDiv.className = "gezi-karti";
+          yerDiv.innerHTML = `
+            <h2>${isim} (${sehir})</h2>
+            <p>${yer.aciklama}</p>
+            ${yer.resim ? `
+              <a href="${yer.resim}" data-lightbox="galeri" data-title="${isim}">
+                <img src="${yer.resim}" alt="${isim}">
+              </a>` : ""}
+            <iframe 
+              src="https://www.google.com/maps?q=${encodeURIComponent(yer.isim)}&output=embed" 
+              width="100%" height="250" 
+              style="border:0; margin-top: 10px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          `;
+          favorilerAlani.appendChild(yerDiv);
+        }
+      });
+    } else {
+      favorilerContainer.style.display = "none";
+    }
   });
 
-  // Giriş ekranından şehir ekranına geçiş
+  // Giriş ekranından şehir seçim ekranına geçiş
   document.getElementById("baslaBtn").addEventListener("click", () => {
     const girisEkrani = document.getElementById("giris-ekrani");
     const sehirEkrani = document.getElementById("sehir-secim-ekrani");
@@ -147,10 +159,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 700);
   });
 
-  // Lightbox ayarları
+  // Lightbox opsiyonları (varsa)
   if (typeof lightbox !== "undefined") {
     lightbox.option({
-      // isteğe bağlı
+      // opsiyonları buraya ekleyebilirsin
     });
   }
 });

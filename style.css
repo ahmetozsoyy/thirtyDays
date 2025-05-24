@@ -232,18 +232,60 @@ body {
   visibility: visible;
   pointer-events: auto;
 }
-.favori-btn {
-  background-color: #fff8dc;
-  border: 1px solid #ccc;
-  padding: 6px 12px;
-  font-size: 14px;
-  cursor: pointer;
+#favorilerContainer {
+  display: flex;
+   /* Başlık ve kartlar üst hizada */
+  gap: 20px; /* Başlık ile kartlar arası boşluk */
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+  
+}
+#favorilerBaslik {
+   text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+#favorilerBtn {
+  background: #3498db;
+   display: block;
+  margin-left: auto;
+  margin-right: 10;
+  margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
 }
-.favori-btn:hover {
-  background-color: #ffe79a;
+
+#favorilerBtn:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
 }
+#favorilerAlani {
+ display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 40px;
+  margin-bottom: 75px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+
+}
+
+
+
 
 
 

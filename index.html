@@ -47,8 +47,6 @@
         <option value="Dogu_Anadolu">Doğu Anadolu</option>
         <option value="Guneydogu_Anadolu">Güneydoğu Anadolu</option>
       </select>
-       <button id="favorilerBtn">Favorilerimi Gör</button>
-<div id="favorilerAlani"></div>
 
       <label for="sehirSec">Bir şehir seçin:</label>
       <select id="sehirSec" disabled>
@@ -57,7 +55,14 @@
 
       <h2 id="sehirBaslik"></h2>
       <div id="geziYerleri"></div>
+      
     </div>
+           <button id="favorilerBtn">Favorilerimi Gör</button>
+  <div id="favorilerContainer" style="display:none;">
+  <h2 id="favorilerBaslik">Favori Yerler</h2>
+  <div id="favorilerAlani"></div>
+</div>
+
   </div>
 
   <!-- Dark Mode -->

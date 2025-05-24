@@ -1042,6 +1042,109 @@ const sehirVerileri = {
     "resim": "img/yozgat_muzesi.jpg"
   }
 ],
+"Elazığ": [
+  {
+    "isim": "Harput Kalesi",
+    "aciklama": "M.Ö. 8. yüzyıla uzanan tarihi kale.",
+    "resim": "img/harput_kalesi.jpg"
+  },
+  {
+    "isim": "Hazar Gölü",
+    "aciklama": "Doğal güzelliğiyle bilinen büyük göl.",
+    "resim": "img/hazar_golu.jpg"
+  },
+  {
+    "isim": "Elazığ Arkeoloji ve Etnografya Müzesi",
+    "aciklama": "Bölge tarihine ışık tutan eserlerin sergilendiği müze.",
+    "resim": "img/elazig_muzesi.jpg"
+  }
+],
+"Erzincan": [
+  {
+    "isim": "Girlevik Şelalesi",
+    "aciklama": "Doğal güzelliğiyle ünlü çok katlı şelale.",
+    "resim": "img/girlevik_selalesi.jpg"
+  },
+  {
+    "isim": "Mama Hatun Türbesi",
+    "aciklama": "Saltuklu döneminden kalma tarihi türbe.",
+    "resim": "img/mama_hatun.jpg"
+  },
+  {
+    "isim": "Kemaliye Taş Yolu",
+    "aciklama": "Dağlar oyularak yapılan tarihi yol.",
+    "resim": "img/kemaliye_tas_yolu.jpg"
+  }
+],
+"Erzurum": [
+  {
+    "isim": "Çifte Minareli Medrese",
+    "aciklama": "13. yüzyıldan kalma Selçuklu eseri.",
+    "resim": "img/cifte_minareli_medrese.jpg"
+  },
+  {
+    "isim": "Palandöken Kayak Merkezi",
+    "aciklama": "Türkiye'nin önemli kış turizmi merkezlerinden biri.",
+    "resim": "img/palandoken.jpg"
+  },
+  {
+    "isim": "Erzurum Kalesi",
+    "aciklama": "Şehrin simgelerinden tarihi kale.",
+    "resim": "img/erzurum_kalesi.jpg"
+  }
+],
+"Malatya": [
+  {
+    "isim": "Aslantepe Höyüğü",
+    "aciklama": "UNESCO Dünya Mirası listesinde yer alan antik yerleşim.",
+    "resim": "img/aslantepe.jpg"
+  },
+  {
+    "isim": "Levent Vadisi",
+    "aciklama": "Eşsiz kaya oluşumlarıyla bilinen vadi.",
+    "resim": "img/levent_vadisi.jpg"
+  },
+  {
+    "isim": "Malatya Müzesi",
+    "aciklama": "Arkeolojik eserlerin sergilendiği müze.",
+    "resim": "img/malatya_muzesi.jpg"
+  }
+],
+"Tunceli": [
+  {
+    "isim": "Munzur Vadisi Milli Parkı",
+    "aciklama": "Türkiye'nin en büyük milli parklarından biri.",
+    "resim": "img/munzur_vadisi.jpg"
+  },
+  {
+    "isim": "Ovacık Yaylası",
+    "aciklama": "Doğayla iç içe serin yayla alanı.",
+    "resim": "img/ovacik_yaylasi.jpg"
+  },
+  {
+    "isim": "Munzur Dağları",
+    "aciklama": "Tunceli'nin simgesel dağları.",
+    "resim": "img/munzur.jpg"
+  }
+],
+"Kars": [
+  {
+    "isim": "Ani Harabeleri",
+    "aciklama": "Orta Çağ'dan kalma antik şehir kalıntıları.",
+    "resim": "img/ani_harabeleri.jpg"
+  },
+  {
+    "isim": "Kars Kalesi",
+    "aciklama": "12. yüzyılda inşa edilen tarihi kale.",
+    "resim": "img/kars_kalesi.jpg"
+  },
+  {
+    "isim": "Sarıkamış Kayak Merkezi",
+    "aciklama": "Kristal kar yapısıyla ünlü kayak merkezi.",
+    "resim": "img/sarikamis.jpg"
+  }
+],
+
 
 
 
