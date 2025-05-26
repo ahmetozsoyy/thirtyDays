@@ -1144,6 +1144,150 @@ const sehirVerileri = {
     "resim": "img/sarikamis.jpg"
   }
 ],
+"Iğdır": [
+  {
+    "isim": "Ağrı Dağı",
+    "aciklama": "Türkiye'nin en yüksek dağı, doğa yürüyüşleri ve tırmanışlar için ideal.",
+    "resim": "img/agri_dagi.jpg"
+  },
+  {
+    "isim": "Tuzluca Tuz Mağaraları",
+    "aciklama": "Şifalı havası ile bilinen doğal tuz mağaraları.",
+    "resim": "img/tuzluca_magara.jpg"
+  },
+  {
+    "isim": "Iğdır Gençlik Parkı",
+    "aciklama": "Şehir merkezinde dinlenme ve yürüyüş alanı.",
+    "resim": "img/igdir_park.jpg"
+  }
+],
+
+"Ardahan": [
+  {
+    "isim": "Çıldır Gölü",
+    "aciklama": "Kışın donan gölde kızakla gezi yapılabilen eşsiz doğa harikası.",
+    "resim": "img/cildir_golu.jpg"
+  },
+  {
+    "isim": "Şeytan Kalesi",
+    "aciklama": "Sarp kayalıklar üzerine kurulu, efsanelere konu olan kale.",
+    "resim": "img/seytan_kalesi.jpg"
+  },
+  {
+    "isim": "Yalnızçam Kayak Merkezi",
+    "aciklama": "Yeni gelişmekte olan kış turizmi merkezi.",
+    "resim": "img/yalnizcam.jpg"
+  }
+],
+
+"Van": [
+  {
+    "isim": "Akdamar Adası ve Kilisesi",
+    "aciklama": "Van Gölü üzerindeki tarihi ada ve Ermeni kilisesi.",
+    "resim": "img/akdamar.jpg"
+  },
+  {
+    "isim": "Van Kedisi Evi",
+    "aciklama": "Nadir görülen Van kedilerini görebileceğiniz özel merkez.",
+    "resim": "img/van_kedisi.jpg"
+  },
+  {
+    "isim": "Van Kalesi",
+    "aciklama": "Urartular döneminden kalma tarihi kale.",
+    "resim": "img/van_kalesi.jpg"
+  }
+],
+
+"Bingöl": [
+  {
+    "isim": "Yüzen Ada",
+    "aciklama": "Gölde serbestçe hareket eden doğal adacıklar.",
+    "resim": "img/yuzan_ada.jpg"
+  },
+  {
+    "isim": "Kös Kaplıcaları",
+    "aciklama": "Şifalı sularıyla ünlü doğal kaplıca bölgesi.",
+    "resim": "img/kos_kaplicalari.jpg"
+  },
+  {
+    "isim": "Zağ Mağaraları",
+    "aciklama": "Doğal oluşumlarıyla dikkat çeken mağaralar.",
+    "resim": "img/zag_magaralari.jpg"
+  }
+],
+
+"Hakkari": [
+  {
+    "isim": "Cilo Dağları",
+    "aciklama": "Türkiye'nin en yüksek ikinci zirvesine sahip dağ silsilesi.",
+    "resim": "img/cilo_daglari.jpg"
+  },
+  {
+    "isim": "Zap Vadisi",
+    "aciklama": "Doğa yürüyüşleri ve kamp için uygun vadi.",
+    "resim": "img/zap_vadisi.jpg"
+  },
+  {
+    "isim": "Berçelan Yaylası",
+    "aciklama": "Yaz aylarında serin havası ve doğasıyla öne çıkan yayla.",
+    "resim": "img/bercelan.jpg"
+  }
+],
+"Bitlis": [
+  {
+    "isim": "Nemrut Krater Gölü",
+    "aciklama": "Dünyanın ikinci büyük krater gölü, doğa severler için ideal.",
+    "resim": "img/nemrut_krater.jpg"
+  },
+  {
+    "isim": "Ahlat Selçuklu Mezarlığı",
+    "aciklama": "Selçuklu dönemine ait taş işçiliğiyle ünlü tarihi mezarlık.",
+    "resim": "img/ahlat_mezarlik.jpg"
+  },
+  {
+    "isim": "Bitlis Kalesi",
+    "aciklama": "Şehrin merkezinde bulunan tarihi kale.",
+    "resim": "img/bitlis_kalesi.jpg"
+  }
+],
+
+"Ağrı": [
+  {
+    "isim": "İshak Paşa Sarayı",
+    "aciklama": "Osmanlı mimarisinin nadide örneklerinden biri, Doğubayazıt'ta yer alır.",
+    "resim": "img/ishak_pasa.jpg"
+  },
+  {
+    "isim": "Ağrı Dağı Milli Parkı",
+    "aciklama": "Efsanelere konu olan dağ, doğa yürüyüşü ve kamp için popüler.",
+    "resim": "img/agri_dagi_milli_park.jpg"
+  },
+  {
+    "isim": "Meteor Çukuru",
+    "aciklama": "Dünyanın en büyük ikinci meteor çukuru, sınır bölgesinde yer alır.",
+    "resim": "img/meteor_cukuru.jpg"
+  }
+],
+
+"Muş": [
+  {
+    "isim": "Murat Köprüsü",
+    "aciklama": "Tarihi köprü, Murat Nehri üzerindedir ve manzarasıyla etkileyicidir.",
+    "resim": "img/murat_koprusu.jpg"
+  },
+  {
+    "isim": "Muş Ovası",
+    "aciklama": "Bahar aylarında açan laleleriyle ünlü geniş ova.",
+    "resim": "img/mus_ovasi.jpg"
+  },
+  {
+    "isim": "Muş Kalesi",
+    "aciklama": "Şehre hakim konumda yer alan tarihi kale kalıntıları.",
+    "resim": "img/mus_kalesi.jpg"
+  }
+]
+
+
 
 
 
