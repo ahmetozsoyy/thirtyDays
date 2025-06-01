@@ -1285,7 +1285,129 @@ const sehirVerileri = {
     "aciklama": "Şehre hakim konumda yer alan tarihi kale kalıntıları.",
     "resim": "img/mus_kalesi.jpg"
   }
-]
+],
+
+  "Diyarbakır": [
+    {
+      "isim": "Diyarbakır Surları",
+      "aciklama": "UNESCO Dünya Mirası listesinde yer alan tarihi surlar.",
+      "resim": "img/diyarbakir_surlari.jpg"
+    },
+    {
+      "isim": "Hevsel Bahçeleri",
+      "aciklama": "Dicle Nehri kıyısındaki verimli bahçeler.",
+      "resim": "img/hevsel_bahceleri.jpg"
+    },
+    {
+      "isim": "Ulu Cami",
+      "aciklama": "Anadolu'nun en eski camilerinden biri.",
+      "resim": "img/ulu_cami_diyarbakir.jpg"
+    }
+  ],
+  "Şanlıurfa": [
+    {
+      "isim": "Balıklıgöl",
+      "aciklama": "Hz. İbrahim'in ateşe atıldığına inanılan kutsal göl.",
+      "resim": "img/balikligol.jpg"
+    },
+    {
+      "isim": "Göbeklitepe",
+      "aciklama": "Dünyanın bilinen en eski tapınağı.",
+      "resim": "img/gobeklitepe.jpg"
+    },
+    {
+      "isim": "Urfa Kalesi",
+      "aciklama": "Balıklıgöl'e bakan tarihi kale.",
+      "resim": "img/urfa_kalesi.jpg"
+    }
+  ],
+  "Batman": [
+    {
+      "isim": "Hasankeyf",
+      "aciklama": "Tarihi mağaraları ve eski yerleşimiyle ünlü antik kent.",
+      "resim": "img/hasankeyf.jpg"
+    },
+    {
+      "isim": "Malabadi Köprüsü",
+      "aciklama": "Artuklu dönemine ait tarihi taş köprü.",
+      "resim": "img/malabadi_koprusu.jpg"
+    },
+    {
+      "isim": "Batman Müzesi",
+      "aciklama": "Yöreye ait arkeolojik eserlerin sergilendiği müze.",
+      "resim": "img/batman_muzesi.jpg"
+    }
+  ],
+  "Adıyaman": [
+    {
+      "isim": "Nemrut Dağı",
+      "aciklama": "Dev heykelleri ve eşsiz gün doğumu manzarasıyla ünlüdür.",
+      "resim": "img/nemrut_dagi.jpg"
+    },
+    {
+      "isim": "Cendere Köprüsü",
+      "aciklama": "Roma döneminden kalma taş köprü.",
+      "resim": "img/cendere_koprusu.jpg"
+    },
+    {
+      "isim": "Perre Antik Kenti",
+      "aciklama": "Tarihi mezar odalarıyla bilinen antik kent.",
+      "resim": "img/perre_antik_kenti.jpg"
+    }
+  ],
+  "Siirt": [
+    {
+      "isim": "Veysel Karani Türbesi",
+      "aciklama": "İslam dünyasında önemli bir ziyaret noktası.",
+      "resim": "img/veysel_karani.jpg"
+    },
+    {
+      "isim": "Tillo",
+      "aciklama": "Manevi havası ve tarihi medreseleriyle ünlüdür.",
+      "resim": "img/tillo.jpg"
+    },
+    {
+      "isim": "Botan Vadisi",
+      "aciklama": "Muhteşem doğa manzaraları sunan vadi.",
+      "resim": "img/botan_vadisi.jpg"
+    }
+  ],
+  "Kilis": [
+    {
+      "isim": "Ravanda Kalesi",
+      "aciklama": "Stratejik bir tepede yer alan tarihi kale.",
+      "resim": "img/ravanda_kalesi.jpg"
+    },
+    {
+      "isim": "Oylum Höyük",
+      "aciklama": "Kilis’in tarihine ışık tutan arkeolojik höyük.",
+      "resim": "img/oylum_hoyuk.jpg"
+    },
+    {
+      "isim": "Kilis Ulu Cami",
+      "aciklama": "Şehrin merkezinde yer alan Osmanlı dönemi camisidir.",
+      "resim": "img/kilis_ulu_cami.jpg"
+    }
+  ],
+  "Şırnak": [
+    {
+      "isim": "Cudi Dağı",
+      "aciklama": "Hz. Nuh'un gemisinin indiğine inanılan dağ.",
+      "resim": "img/cudi_dagi.jpg"
+    },
+    {
+      "isim": "Kasrik Boğazı",
+      "aciklama": "Doğal güzelliğiyle dikkat çeken vadi.",
+      "resim": "img/kasrik_bogazi.jpg"
+    },
+    {
+      "isim": "Finik Ören Yeri",
+      "aciklama": "Antik dönemden kalma kalıntılar barındırır.",
+      "resim": "img/finik_oren_yeri.jpg"
+    }
+  ]
+
+
 
 
 
