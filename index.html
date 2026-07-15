@@ -3,79 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gezi Rehberi</title>
+  <title>Türkiye Gezi Rehberi</title>
   <link rel="stylesheet" href="style.css" />
-  
-  <link
-  rel="stylesheet"
-  
-  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
-/>
-<!-- Google Fonts (Inter) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body>
+<body class="locked-scroll">
 
-  <!-- Giriş ekranı -->
+  <!-- GİRİŞ EKRANI -->
   <div id="giris-ekrani" class="fade">
-    <h1>Türkiye Gezi Rehberi</h1>
-    <p>Ülkemizin güzelliklerini keşfetmeye hazır mısınız?</p>
-    <button id="baslaBtn">Keşfetmeye Başla</button>
+     <style>
+        #giris-ekrani { isolation: isolate; }
+    </style>
+    <div class="giris-content">
+        <h1>Türkiye Gezi Rehberi</h1>
+        <p>Gizli cennetleri ve eşsiz manzaraları keşfet.</p>
+        <button id="baslaBtn">
+            <span>Keşfe Başla</span>
+            <i class="ph-bold ph-arrow-right"></i>
+        </button>
+    </div>
   </div>
 
-  <!-- Şehir seçim ekranı -->
+  <!-- ANA UYGULAMA EKRANI -->
   <div id="sehir-secim-ekrani" class="fade-in">
-    <div class="container">
-      <h1 id="siteBaslik">Gezi Rehberi</h1>
+    
+    <!-- Hero / Header Area -->
+    <header class="app-header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1 id="siteBaslik">Keşfet</h1>
+            <p>Bir sonraki maceranız nerede başlayacak?</p>
+            <button id="favorilerBtn" class="floating-fav-btn">
+                <i class="ph-fill ph-heart"></i> Favorilerim
+            </button>
+        </div>
+    </header>
 
-      <div class="dropdown-group">
-        <label for="bolgeSec">Bir bölge seçin:</label>
-        <select id="bolgeSec">
-          <option value="">--Bölge Seçin--</option>
-          <option value="Marmara">Marmara</option>
-          <option value="Karadeniz">Karadeniz</option>
-          <option value="Akdeniz">Akdeniz</option>
-          <option value="Ege">Ege</option>
-          <option value="Ic_Anadolu">İç Anadolu</option>
-          <option value="Dogu_Anadolu">Doğu Anadolu</option>
-          <option value="Guneydogu_Anadolu">Güneydoğu Anadolu</option>
-        </select>
+    <!-- Floating Search/Filter Bar -->
+    <div class="search-bar-container">
+        <div class="search-bar">
+            <div class="dropdown-group">
+                <div class="input-wrapper">
+                    <i class="ph-bold ph-map-pin"></i>
+                    <select id="bolgeSec">
+                        <option value="">Bölge Seçin</option>
+                        <option value="Marmara">Marmara</option>
+                        <option value="Karadeniz">Karadeniz</option>
+                        <option value="Akdeniz">Akdeniz</option>
+                        <option value="Ege">Ege</option>
+                        <option value="Ic_Anadolu">İç Anadolu</option>
+                        <option value="Dogu_Anadolu">Doğu Anadolu</option>
+                        <option value="Guneydogu_Anadolu">Güneydoğu Anadolu</option>
+                    </select>
+                </div>
+                
+                <div class="divider"></div>
 
-        <label for="sehirSec">Bir şehir seçin:</label>
-        <select id="sehirSec" disabled>
-          <option value="">--Şehir Seçin--</option>
-        </select>
+                <div class="input-wrapper">
+                    <i class="ph-bold ph-buildings"></i>
+                    <select id="sehirSec" disabled>
+                        <option value="">Şehir Seçin</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="container">
+      <div id="sehirBaslikKapsayici">
+        <h2 id="sehirBaslik"></h2>
       </div>
-
-      <h2 id="sehirBaslik"></h2>
       <div id="geziYerleri"></div>
       
-    </div>
-           <button id="favorilerBtn">Favorilerimi Gör</button>
-  <div id="favorilerContainer" style="display:none;">
-  <h2 id="favorilerBaslik">Favori Yerler</h2>
-  <div id="favorilerAlani"></div>
-</div>
+      <!-- Favoriler Alanı -->
+      <div id="favorilerContainer" style="display:none;">
+        <h2 id="favorilerBaslik">Favori Mekanlarınız</h2>
+        <div id="favorilerAlani"></div>
+      </div>
+    </main>
 
   </div>
 
-  <!-- Karanlık Mod Kaldırıldı -->
-
-<!-- 1. jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-<!-- 2. Lightbox2 JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-
-  <!-- Harici script dosyaları -->
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>

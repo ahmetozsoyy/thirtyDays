@@ -19,17 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
     Guneydogu_Anadolu: ["Gaziantep", "Diyarbakır", "Şanlıurfa", "Batman", "Adıyaman", "Siirt", "Mardin", "Kilis", "Şırnak"]
   };
 
-  // Burada sehirVerileri isimli değişkenin data.js'den geldiğini varsayıyorum.
-  // Eğer yoksa, data.js'deki verileri uygun şekilde doldurman gerekir.
-
   bolgeDropdown.addEventListener("change", () => {
     const secilenBolge = bolgeDropdown.value;
     const sehirler = bolgeSehirVerileri[secilenBolge] || [];
 
-    sehirDropdown.innerHTML = "<option value=''>--Şehir Seçin--</option>";
+    sehirDropdown.innerHTML = "<option value=''>Şehir Seçin</option>";
     geziYerleriDiv.innerHTML = "";
     sehirBaslik.textContent = "";
-    favorilerContainer.style.display = "none"; // Favorileri kapat
+    favorilerContainer.style.display = "none"; 
 
     if (sehirler.length > 0) {
       sehirler.forEach(sehir => {
@@ -50,58 +47,76 @@ document.addEventListener("DOMContentLoaded", () => {
 
     geziYerleriDiv.innerHTML = "";
     favorilerAlani.innerHTML = "";
-    favorilerContainer.style.display = "none"; // Favorileri kapat
+    favorilerContainer.style.display = "none";
     sehirBaslik.textContent = "";
 
     if (secilenSehir) {
       if (yerler.length > 0) {
-        sehirBaslik.textContent = `${secilenSehir} Şehrinde Gezilecek Yerler`;
+        sehirBaslik.textContent = `${secilenSehir} Keşif Rehberi`;
         yerler.forEach(yer => {
           const favoriKey = `${secilenSehir}-${yer.isim}`;
           const isFavori = favoriler.has(favoriKey);
-          const favoriYazi = isFavori ? "Favoriden Çıkar" : "Favorilere Ekle";
-          const favoriClass = isFavori ? "favori-btn active" : "favori-btn";
+          const iconClass = isFavori ? "ph-fill ph-heart" : "ph ph-heart";
+          const btnClass = isFavori ? "fav-icon-btn active" : "fav-icon-btn";
 
           const yerDiv = document.createElement("div");
           yerDiv.className = "gezi-karti";
+          
+          let resimHtml = yer.resim ? `
+            <div class="card-image-wrapper">
+                <button class="${btnClass}" data-key="${favoriKey}" title="Favorilere Ekle/Çıkar">
+                    <i class="${iconClass}"></i>
+                </button>
+                <a href="${yer.resim}" data-lightbox="galeri" data-title="${yer.isim}">
+                    <img src="${yer.resim}" alt="${yer.isim}">
+                </a>
+            </div>
+          ` : `
+             <div class="card-image-wrapper" style="background:#eee; display:flex; align-items:center; justify-content:center;">
+                <button class="${btnClass}" data-key="${favoriKey}" title="Favorilere Ekle/Çıkar">
+                    <i class="${iconClass}"></i>
+                </button>
+                <i class="ph ph-image" style="font-size:3rem; color:#ccc;"></i>
+             </div>
+          `;
+
           yerDiv.innerHTML = `
-            <h2>${yer.isim}</h2>
-            <p>${yer.aciklama}</p>
-            <button class="${favoriClass}" data-key="${favoriKey}">${favoriYazi}</button>
-            ${yer.resim ? `
-              <a href="${yer.resim}" data-lightbox="galeri" data-title="${yer.isim}">
-                <img src="${yer.resim}" alt="${yer.isim}">
-              </a>` : ""}
-            <iframe 
-              src="https://www.google.com/maps?q=${encodeURIComponent(yer.isim)}&output=embed" 
-              width="100%" height="250" 
-              style="border:0; margin-top: 10px;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            ${resimHtml}
+            <div class="card-content">
+                <h2>${yer.isim}</h2>
+                <p>${yer.aciklama}</p>
+                <div class="card-map">
+                    <iframe 
+                    src="https://www.google.com/maps?q=${encodeURIComponent(yer.isim)}&output=embed" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
           `;
           geziYerleriDiv.appendChild(yerDiv);
         });
 
-        // Favori butonlarına tıklandığında favoriler setini güncelle
-        document.querySelectorAll(".favori-btn").forEach(btn => {
+        // Favori buton event'leri
+        document.querySelectorAll(".fav-icon-btn").forEach(btn => {
           btn.addEventListener("click", () => {
             const key = btn.dataset.key;
+            const icon = btn.querySelector("i");
             if (favoriler.has(key)) {
               favoriler.delete(key);
-              btn.textContent = "Favorilere Ekle";
               btn.classList.remove("active");
+              icon.className = "ph ph-heart";
             } else {
               favoriler.add(key);
-              btn.textContent = "Favoriden Çıkar";
               btn.classList.add("active");
+              icon.className = "ph-fill ph-heart";
             }
           });
         });
       } else {
-        sehirBaslik.textContent = `${secilenSehir} için kayıtlı yer bulunamadı`;
-        geziYerleriDiv.innerHTML = "<p>Bu şehirde henüz bir yer bilgisi yok.</p>";
+        sehirBaslik.textContent = `${secilenSehir} için henüz kayıt yok`;
+        geziYerleriDiv.innerHTML = "<p style='color:var(--text-muted);'>Bu şehirde henüz bir yer bilgisi eklenmemiş. Yeni keşifler yolda!</p>";
       }
     }
   });
@@ -109,11 +124,12 @@ document.addEventListener("DOMContentLoaded", () => {
   favorilerBtn.addEventListener("click", () => {
     if (favorilerContainer.style.display === "none" || favorilerContainer.style.display === "") {
       favorilerContainer.style.display = "block";
-
       favorilerAlani.innerHTML = "";
 
       if (favoriler.size === 0) {
-        favorilerAlani.innerHTML = "<p>Henüz favori eklenmemiş.</p>";
+        favorilerAlani.innerHTML = "<p style='color:var(--text-muted); padding: 20px 0;'>Henüz favori listenize bir yer eklemediniz.</p>";
+        // scroll to favorites
+        document.getElementById("favorilerBaslik").scrollIntoView({ behavior: 'smooth' });
         return;
       }
 
@@ -124,31 +140,41 @@ document.addEventListener("DOMContentLoaded", () => {
         if (yer) {
           const yerDiv = document.createElement("div");
           yerDiv.className = "gezi-karti";
+          
+          let resimHtml = yer.resim ? `
+            <div class="card-image-wrapper">
+                <a href="${yer.resim}" data-lightbox="galeri" data-title="${isim}">
+                    <img src="${yer.resim}" alt="${isim}">
+                </a>
+            </div>
+          ` : "";
+
           yerDiv.innerHTML = `
-            <h2>${isim} (${sehir})</h2>
-            <p>${yer.aciklama}</p>
-            ${yer.resim ? `
-              <a href="${yer.resim}" data-lightbox="galeri" data-title="${isim}">
-                <img src="${yer.resim}" alt="${isim}">
-              </a>` : ""}
-            <iframe 
-              src="https://www.google.com/maps?q=${encodeURIComponent(yer.isim)}&output=embed" 
-              width="100%" height="250" 
-              style="border:0; margin-top: 10px;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            ${resimHtml}
+            <div class="card-content">
+                <h2>${isim} <span style="font-size: 1rem; color:var(--text-muted); font-weight:normal;">(${sehir})</span></h2>
+                <p>${yer.aciklama}</p>
+                <div class="card-map">
+                    <iframe 
+                    src="https://www.google.com/maps?q=${encodeURIComponent(yer.isim)}&output=embed" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
           `;
           favorilerAlani.appendChild(yerDiv);
         }
       });
+      // Scroll to favorites
+      document.getElementById("favorilerBaslik").scrollIntoView({ behavior: 'smooth' });
     } else {
       favorilerContainer.style.display = "none";
     }
   });
 
-  // Giriş ekranından şehir seçim ekranına geçiş
+  // Giriş ekranından geçiş ve scroll kilidini kaldırma
   document.getElementById("baslaBtn").addEventListener("click", () => {
     const girisEkrani = document.getElementById("giris-ekrani");
     const sehirEkrani = document.getElementById("sehir-secim-ekrani");
@@ -157,15 +183,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       girisEkrani.style.display = "none";
+      document.body.classList.remove("locked-scroll"); // SCROLL KILIDINI KALDIR
       sehirEkrani.style.display = "block";
       sehirEkrani.classList.add("show");
-    }, 700);
+    }, 500);
   });
 
-  // Lightbox opsiyonları (varsa)
+  // Lightbox opsiyonları
   if (typeof lightbox !== "undefined") {
     lightbox.option({
-      // opsiyonları buraya ekleyebilirsin
+      'resizeDuration': 200,
+      'wrapAround': true
     });
   }
 });
