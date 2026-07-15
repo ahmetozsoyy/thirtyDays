@@ -59,14 +59,15 @@ document.addEventListener("DOMContentLoaded", () => {
         yerler.forEach(yer => {
           const favoriKey = `${secilenSehir}-${yer.isim}`;
           const isFavori = favoriler.has(favoriKey);
-          const favoriYazi = isFavori ? "★ Favoriden Çıkar" : "☆ Favorilere Ekle";
+          const favoriYazi = isFavori ? "Favoriden Çıkar" : "Favorilere Ekle";
+          const favoriClass = isFavori ? "favori-btn active" : "favori-btn";
 
           const yerDiv = document.createElement("div");
           yerDiv.className = "gezi-karti";
           yerDiv.innerHTML = `
             <h2>${yer.isim}</h2>
             <p>${yer.aciklama}</p>
-            <button class="favori-btn" data-key="${favoriKey}">${favoriYazi}</button>
+            <button class="${favoriClass}" data-key="${favoriKey}">${favoriYazi}</button>
             ${yer.resim ? `
               <a href="${yer.resim}" data-lightbox="galeri" data-title="${yer.isim}">
                 <img src="${yer.resim}" alt="${yer.isim}">
@@ -89,10 +90,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const key = btn.dataset.key;
             if (favoriler.has(key)) {
               favoriler.delete(key);
-              btn.textContent = "☆ Favorilere Ekle";
+              btn.textContent = "Favorilere Ekle";
+              btn.classList.remove("active");
             } else {
               favoriler.add(key);
-              btn.textContent = "★ Favoriden Çıkar";
+              btn.textContent = "Favoriden Çıkar";
+              btn.classList.add("active");
             }
           });
         });

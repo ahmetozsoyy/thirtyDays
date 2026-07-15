@@ -26,11 +26,9 @@
 
   <!-- Giriş ekranı -->
   <div id="giris-ekrani" class="fade">
-     <style>
-        #giris-ekrani{isolation: isolate;}
-    </style>
     <h1>Türkiye Gezi Rehberi</h1>
-    <button id="baslaBtn">-Başlayalım!-</button>
+    <p>Ülkemizin güzelliklerini keşfetmeye hazır mısınız?</p>
+    <button id="baslaBtn">Keşfetmeye Başla</button>
   </div>
 
   <!-- Şehir seçim ekranı -->
@@ -38,23 +36,24 @@
     <div class="container">
       <h1 id="siteBaslik">Gezi Rehberi</h1>
 
+      <div class="dropdown-group">
+        <label for="bolgeSec">Bir bölge seçin:</label>
+        <select id="bolgeSec">
+          <option value="">--Bölge Seçin--</option>
+          <option value="Marmara">Marmara</option>
+          <option value="Karadeniz">Karadeniz</option>
+          <option value="Akdeniz">Akdeniz</option>
+          <option value="Ege">Ege</option>
+          <option value="Ic_Anadolu">İç Anadolu</option>
+          <option value="Dogu_Anadolu">Doğu Anadolu</option>
+          <option value="Guneydogu_Anadolu">Güneydoğu Anadolu</option>
+        </select>
 
-      <label for="bolgeSec">Bir bölge seçin:</label>
-      <select id="bolgeSec">
-        <option value="">--Bölge Seçin--</option>
-        <option value="Marmara">Marmara</option>
-        <option value="Karadeniz">Karadeniz</option>
-        <option value="Akdeniz">Akdeniz</option>
-        <option value="Ege">Ege</option>
-        <option value="Ic_Anadolu">İç Anadolu</option>
-        <option value="Dogu_Anadolu">Doğu Anadolu</option>
-        <option value="Guneydogu_Anadolu">Güneydoğu Anadolu</option>
-      </select>
-
-      <label for="sehirSec">Bir şehir seçin:</label>
-      <select id="sehirSec" disabled>
-        <option value="">--Şehir Seçin--</option>
-      </select>
+        <label for="sehirSec">Bir şehir seçin:</label>
+        <select id="sehirSec" disabled>
+          <option value="">--Şehir Seçin--</option>
+        </select>
+      </div>
 
       <h2 id="sehirBaslik"></h2>
       <div id="geziYerleri"></div>
